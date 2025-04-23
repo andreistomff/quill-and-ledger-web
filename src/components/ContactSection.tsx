@@ -1,4 +1,3 @@
-
 import { MapPin, Navigation, Phone, Mail, Smartphone } from "lucide-react";
 
 const ADDRESS = {
@@ -12,13 +11,13 @@ const ADDRESS = {
 
 const CONTACT_INFO = {
   phone: "031 422 8848",
-  fax: "031 422 8848", // Keeping this value even though we'll use Mail icon
+  fax: "031 422 8848",
   mobile: "0774 646 195",
 };
 
 const GOOGLE_MAPS_EMBED = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2849.5432!2d26.0977!3d44.4459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff4868c2c1b5%3A0x1f3d7c20bfb3b457!2sBulevardul%20Ion%20Mihalache%20106%2C%20București!5e0!3m2!1sro!2sro!4v1719848123456!5m2!1sro!2sro`;
 
-const wazeLink = `https://www.waze.com/en/live-map/directions?to=ll.44.4459%2C26.0977`;
+const wazeLink = `https://www.waze.com/en/live-map/directions?to=ll.44.4459%2C26.0977&q=B-dul%20Ion%20Mihalache%20106%20Bloc%2084%20Sector%201%20București`;
 
 export default function ContactSection() {
   return (
