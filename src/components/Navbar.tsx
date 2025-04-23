@@ -3,8 +3,8 @@ import { Link, useLocation } from "react-router-dom";
 import { Home, List } from "lucide-react";
 
 const navItems = [
-  { to: "/", label: "Home", icon: Home },
-  { to: "/services", label: "Services", icon: List },
+  { to: "/", label: "Acasă", icon: Home },
+  { to: "/services", label: "Servicii", icon: List },
 ];
 
 export default function Navbar() {
