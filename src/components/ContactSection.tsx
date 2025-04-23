@@ -17,7 +17,7 @@ const CONTACT_INFO = {
 
 const GOOGLE_MAPS_EMBED = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2849.5432!2d26.0977!3d44.4459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff4868c2c1b5%3A0x1f3d7c20bfb3b457!2sBulevardul%20Ion%20Mihalache%20106%2C%20București!5e0!3m2!1sro!2sro!4v1719848123456!5m2!1sro!2sro`;
 
-const wazeLink = `https://www.waze.com/en/live-map/directions/municipiul-bucuresti/bucuresti?place=11173323.106`;
+const WAZE_EMBED = `https://embed.waze.com/iframe?zoom=16&lat=44.461971&lon=26.073061&ct=livemap`;
 
 export default function ContactSection() {
   return (
@@ -30,7 +30,6 @@ export default function ContactSection() {
         Contact & Vizitați-ne
       </h2>
       <div className="flex flex-col md:flex-row gap-8">
-        {/* Address & Contact Info */}
         <div className="flex-1 flex flex-col justify-between">
           <div>
             <p className="font-semibold text-gray-800 text-lg mb-1">Adresa Biroului Nostru:</p>
@@ -39,7 +38,6 @@ export default function ContactSection() {
               {ADDRESS.city}, {ADDRESS.state}
             </address>
 
-            {/* Contact Methods */}
             <div className="space-y-2 mb-5">
               <div className="flex items-center text-gray-700">
                 <Phone className="mr-2 text-primary" size={20} />
@@ -66,7 +64,7 @@ export default function ContactSection() {
             </a>
           </div>
           <a
-            href={wazeLink}
+            href="https://www.waze.com/ul?ll=44.461971%2C26.073061&navigate=yes"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center mt-4 bg-[#1A1F2C] text-white text-base font-semibold py-2 px-4 rounded-lg shadow hover:bg-[#222] transition-colors w-max"
@@ -78,7 +76,6 @@ export default function ContactSection() {
           </a>
         </div>
 
-        {/* Google Map */}
         <div className="flex-1 min-w-[250px] h-[220px] md:h-auto rounded-lg overflow-hidden border border-gray-200 shadow">
           <iframe
             title="Biroul Notarial Mariana Cîrstocea Locație"
@@ -92,6 +89,17 @@ export default function ContactSection() {
             referrerPolicy="no-referrer-when-downgrade"
           />
         </div>
+      </div>
+
+      <div className="mt-4 w-full rounded-lg overflow-hidden shadow-md">
+        <iframe
+          src={WAZE_EMBED}
+          width="100%"
+          height="450"
+          allowFullScreen
+          title="Rută Waze"
+          className="border-0"
+        />
       </div>
     </section>
   );
