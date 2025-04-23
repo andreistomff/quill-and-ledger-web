@@ -12,7 +12,7 @@ export default function Navbar() {
   return (
     <nav className="flex items-center justify-between py-4 px-6 border-b border-gray-200 bg-white">
       <span className="font-playfair text-xl md:text-2xl font-bold tracking-tight text-primary">
-        Quill & Ledger
+        Biroul Notarial Mariana Cîrstocea
       </span>
       <ul className="flex gap-6">
         {navItems.map((item) => {
