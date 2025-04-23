@@ -1,6 +1,6 @@
 
 import { Link, useLocation } from "react-router-dom";
-import { Home, List, FilePen } from "lucide-react";
+import { Home, List, Scale } from "lucide-react";
 
 const navItems = [
   { to: "/", label: "Acasă", icon: Home },
@@ -12,11 +12,11 @@ export default function Navbar() {
   return (
     <nav className="flex items-center justify-between py-4 px-6 border-b border-gray-200 bg-white">
       <span className="flex items-center gap-2 font-playfair text-xl md:text-2xl font-bold tracking-tight text-primary">
-        <FilePen
+        <Scale
           size={32}
           strokeWidth={2.3}
           className="text-primary md:mr-1 mb-0.5"
-          aria-label="Notariat"
+          aria-label="Birou Notarial"
         />
         Biroul Notarial Mariana Cîrstocea
       </span>
