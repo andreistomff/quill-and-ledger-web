@@ -1,5 +1,5 @@
 
-import { MapPin, Navigation, Phone, Fax, Smartphone } from "lucide-react";
+import { MapPin, Navigation, Phone, Mail, Smartphone } from "lucide-react";
 
 const ADDRESS = {
   line1: "B-dul Ion Mihalache, nr. 106, Bl. 84, Sc. B, Et. 2, Ap. 32",
@@ -12,7 +12,7 @@ const ADDRESS = {
 
 const CONTACT_INFO = {
   phone: "031 422 8848",
-  fax: "031 422 8848",
+  fax: "031 422 8848", // Keeping this value even though we'll use Mail icon
   mobile: "0774 646 195",
 };
 
@@ -47,7 +47,7 @@ export default function ContactSection() {
                 <a href={`tel:${CONTACT_INFO.phone}`}>{CONTACT_INFO.phone}</a>
               </div>
               <div className="flex items-center text-gray-700">
-                <Fax className="mr-2 text-primary" size={20} />
+                <Mail className="mr-2 text-primary" size={20} />
                 <a href={`tel:${CONTACT_INFO.fax}`}>{CONTACT_INFO.fax}</a>
               </div>
               <div className="flex items-center text-gray-700">
@@ -97,4 +97,3 @@ export default function ContactSection() {
     </section>
   );
 }
-
