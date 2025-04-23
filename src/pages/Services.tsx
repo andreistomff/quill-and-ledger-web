@@ -8,34 +8,34 @@ type Service = {
 
 const services: Service[] = [
   {
-    name: "Standard Document Notarization",
-    description: "For powers of attorney, affidavits, medical forms, and more.",
+    name: "Legalizare Documente Standard",
+    description: "Pentru procuri, declarații pe proprie răspundere, formulare medicale și altele.",
     documents: [
-      "Government-issued ID",
-      "Unsigned documents needing notarization",
-      "Related supporting documents",
+      "Act de identitate emis de autorități",
+      "Documente nesemnate ce necesită legalizare",
+      "Documente suplimentare relevante",
     ],
-    price: "$25 per signature",
+    price: "25 RON / semnătură",
   },
   {
-    name: "Real Estate Closings",
-    description: "Professional handling of deeds, mortgages, and real estate documents.",
+    name: "Întocmire Acte Imobiliare",
+    description: "Asistență profesională pentru acte de proprietate, ipoteci și tranzacții imobiliare.",
     documents: [
-      "Valid photo ID",
-      "All relevant real estate documents (deed, mortgage, etc.)",
-      "Completed forms as provided by parties",
+      "Act de identitate valabil",
+      "Toate documentele relevante pentru actul imobiliar (contract vânzare-cumpărare, ipotecă, etc.)",
+      "Formulare completate de către părți",
     ],
-    price: "$150 per closing",
+    price: "150 RON / tranzacție",
   },
   {
-    name: "Business & Corporate Notarization",
-    description: "For business formation documents, contracts, and resolutions.",
+    name: "Legalizare Acte pentru Societăți",
+    description: "Pentru acte de înființare firmă, contracte comerciale și hotărâri.",
     documents: [
-      "Officer/representative government-issued ID",
-      "Unsigned business documents",
-      "Business entity formation papers",
+      "Act de identitate al administratorului/reprezentantului",
+      "Documente nesemnate ale societății",
+      "Acte privind înființarea societății",
     ],
-    price: "$40 per document",
+    price: "40 RON / document",
   },
 ];
 
@@ -43,7 +43,7 @@ export default function Services() {
   return (
     <div className="max-w-3xl mx-auto py-8 px-4">
       <h2 className="font-playfair text-3xl font-bold mb-6 text-primary">
-        Our Services
+        Serviciile noastre
       </h2>
       <div className="space-y-8">
         {services.map((service) => (
@@ -51,14 +51,14 @@ export default function Services() {
             <h3 className="font-playfair text-2xl font-semibold mb-2 text-primary">{service.name}</h3>
             <p className="text-gray-700 font-inter mb-3">{service.description}</p>
             <div className="mb-2">
-              <span className="block text-gray-500 text-sm font-semibold mb-1 font-inter">Required Documents:</span>
+              <span className="block text-gray-500 text-sm font-semibold mb-1 font-inter">Documente necesare:</span>
               <ul className="list-disc list-inside space-y-1 text-gray-600 text-[15px] font-inter">
                 {service.documents.map((doc, idx) => (
                   <li key={idx}>{doc}</li>
                 ))}
               </ul>
             </div>
-            <div className="font-semibold text-primary font-inter text-lg mt-4">Price: {service.price}</div>
+            <div className="font-semibold text-primary font-inter text-lg mt-4">Preț: {service.price}</div>
           </div>
         ))}
       </div>
