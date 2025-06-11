@@ -24,13 +24,14 @@ const serviceCategories: ServiceCategory[] = [
         documents: [
           "Acte de identitate părţi",
           "Acte de proprietate imobil",
-          "Certificat fiscal - se obține prin notariat"
-          "Documentaţia cadastrală"
-          "Extras de carte funciară pentru autentificare - se obţine prin notariat"
-          "Certificat de performanță energetică, eliberat de un auditor energetic atestat"
-          "Pentru apartamente - adeverinţă de la asociaţia de proprietari"
+          "Certificat fiscal - se obține prin notariat",
+          "Documentaţia cadastrală",
+          "Extras de carte funciară pentru autentificare - se obţine prin notariat",
+          "Certificat de performanță energetică, eliberat de un auditor energetic atestat",
+          "Pentru apartamente - adeverinţă de la asociaţia de proprietari",
           "Ultima factură și chitanță privind plata la zi a utilităţilor imobilului"
         ],
+        price: "300 RON"
       },
       {
         name: "Antecontract Vânzare-Cumpărare (Precontract)",
@@ -38,24 +39,26 @@ const serviceCategories: ServiceCategory[] = [
         documents: [
           "Acte de identitate părţi",
           "Acte de proprietate imobil",
-          "Documentaţia cadastrală"
-          "Extras de carte funciară pentru informare - se obține prin notariat"
+          "Documentaţia cadastrală",
+          "Extras de carte funciară pentru informare - se obţine prin notariat"
         ],
-      }
-    ]
-     name: "Contract de Donaţie Imobil",
+        price: "200 RON"
+      },
+      {
+        name: "Contract de Donaţie Imobil",
         description: "Prin contractul de donaţie, donatorul transmite donatarului, gratuit şi irevocabil, dreptul asupra unui bun.",
         documents: [
           "Acte de identitate părţi",
           "Acte de proprietate imobil",
-          "Certificat fiscal - se obține prin notariat"
-          "Documentaţia cadastrală"
-          "Extras de carte funciară pentru autentificare - se obţine prin notariat"
-          "Pentru apartamente - adeverinţă de la asociaţia de proprietari"
+          "Certificat fiscal - se obține prin notariat",
+          "Documentaţia cadastrală",
+          "Extras de carte funciară pentru autentificare - se obţine prin notariat",
+          "Pentru apartamente - adeverinţă de la asociaţia de proprietari",
           "Ultima factură și chitanță privind plata la zi a utilităţilor imobilului"
         ],
+        price: "250 RON"
       }
-    ],
+    ]
   },
   {
     id: "succesiune",
@@ -132,9 +135,14 @@ const serviceCategories: ServiceCategory[] = [
 
 const ServiceCard = ({ service }: { service: Service }) => (
   <div className="border-l-4 border-primary/20 pl-4 bg-white rounded-lg p-6 shadow-sm border border-gray-100">
-    <h4 className="font-playfair text-lg font-semibold mb-2 text-primary">
-      {service.name}
-    </h4>
+    <div className="flex justify-between items-start mb-2">
+      <h4 className="font-playfair text-lg font-semibold text-primary">
+        {service.name}
+      </h4>
+      <span className="text-primary font-semibold text-lg">
+        {service.price}
+      </span>
+    </div>
     <p className="text-gray-700 font-inter mb-3">
       {service.description}
     </p>
