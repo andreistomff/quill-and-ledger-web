@@ -52,18 +52,21 @@ const serviceCategories: ServiceCategory[] = [
           "Documentaţia cadastrală",
           "Extras de carte funciară pentru autentificare - se obţine prin notariat",
           "Pentru apartamente - adeverinţă de la asociaţia de proprietari",
-          "Ultima factură și chitanță privind plata la zi a utilităţilor imobilului"
+          "Ultima factură și chitanță privind plata la zi a utilităţilor aferente imobilului."
         ]
       },
       {
         name: "Contract de Partaj",
         description: "Contractul de partaj se încheie între coproprietarii unui bun pentru împărțirea bunului comun și transformarea cotelor-părți ideale în proprietăți distincte.",
         documents: [
-          "Acte de identitate ale tuturor coproprietarilor",
-          "Acte de proprietate ale bunului comun",
-          "Documentația cadastrală",
-          "Extras de carte funciară pentru autentificare",
-          "Acordul tuturor coproprietarilor"
+          "Acte de identitate părţi",
+          "Actele de proprietate ale imobilului de partajat",
+          "Certificate fiscale pe numele fiecărui coproprietar - se obțin gratuit prin notariat",
+          "Documentaţia cadastrală",
+          "Extras de carte funciară pentru autentificare - se obţine prin notariat"
+          "Pentru apartamente - adeverinţa eliberată de asociaţia de proprietari"
+          "La imobilele dobândite prin credit - acordul scris al băncii cu privire la încheierea partajului"
+          "In cazul terenurilor - certificat de urbanism"
         ]
       },
       {
@@ -71,11 +74,11 @@ const serviceCategories: ServiceCategory[] = [
         description: "Prin contractul de schimb, părțile își transmit reciproc proprietatea asupra unor bunuri imobile, fără plată de bani.",
         documents: [
           "Acte de identitate părţi",
-          "Acte de proprietate pentru ambele imobile",
-          "Certificat fiscal pentru ambele imobile",
-          "Documentaţia cadastrală pentru ambele imobile",
-          "Extras de carte funciară pentru autentificare pentru ambele imobile",
-          "Certificat de performanță energetică pentru ambele imobile"
+          "Actele de proprietate ale imobilelor ce fac obiectul schimbului",
+          "Certificate fiscale pe numele proprietarilor, eliberate de Administraţia Financiară competentă, din care să rezulte că proprietarii-coschimbaşi au achitat la zi datoriile către Stat",
+          "Documentaţia cadastrală a bunurilor imobile, întocmita de un expert cadastral autorizat",
+          "Extrasele de carte funciară, se obţin prin notariat",
+          "In cazul schimbului de apartamente: adeverinţe eliberate de asociaţiile de proprietari sau locatari care sa arate că proprietarul este la zi cu datoriile faţă de aceasta"
         ]
       },
       {
