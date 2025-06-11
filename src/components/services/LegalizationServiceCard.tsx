@@ -49,6 +49,7 @@ const LegalizationServiceCard = ({ service }: LegalizationServiceCardProps) => {
             <label key={key} className="flex items-start space-x-3 cursor-pointer">
               <input
                 type="checkbox"
+                id={`${service.name}-${key}`}
                 checked={selectedTypes.includes(key)}
                 onChange={() => handleTypeToggle(key)}
                 className="mt-1 h-4 w-4 text-primary border-gray-300 rounded focus:ring-primary"

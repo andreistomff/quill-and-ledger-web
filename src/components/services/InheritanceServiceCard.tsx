@@ -20,6 +20,8 @@ const InheritanceServiceCard = ({ service }: InheritanceServiceCardProps) => {
 
   // Combină documentele din toate tipurile selectate și elimină duplicatele
   const getCombinedDocuments = () => {
+    if (selectedAssetTypes.length === 0) return [];
+    
     const allDocuments = selectedAssetTypes.flatMap(
       assetTypeKey => service.assetTypes[assetTypeKey]?.documents || []
     );
@@ -47,12 +49,12 @@ const InheritanceServiceCard = ({ service }: InheritanceServiceCardProps) => {
           {Object.entries(service.assetTypes).map(([key, assetType]) => (
             <div key={key} className="flex items-center space-x-2">
               <Checkbox
-                id={key}
+                id={`${service.name}-${key}`}
                 checked={selectedAssetTypes.includes(key)}
                 onCheckedChange={(checked) => handleAssetTypeChange(key, checked as boolean)}
               />
               <label 
-                htmlFor={key} 
+                htmlFor={`${service.name}-${key}`} 
                 className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 cursor-pointer"
               >
                 {assetType.label}
@@ -73,6 +75,12 @@ const InheritanceServiceCard = ({ service }: InheritanceServiceCardProps) => {
             ))}
           </ul>
         </div>
+      )}
+
+      {selectedAssetTypes.length === 0 && (
+        <p className="text-gray-500 text-sm font-inter italic">
+          Selectați unul sau mai multe tipuri de bunuri moștenite pentru a vedea documentele necesare.
+        </p>
       )}
     </div>
   );

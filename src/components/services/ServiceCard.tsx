@@ -1,3 +1,4 @@
+
 import { Service } from "@/types/services";
 
 interface ServiceCardProps {
@@ -16,8 +17,10 @@ const ServiceCard = ({ service }: ServiceCardProps) => {
     if (formattedPoints.length >= 2) {
       const lastPoint = formattedPoints.pop();
       const secondLastPoint = formattedPoints.pop();
-      const mergedPoint = `${secondLastPoint.replace(/\.$/, '')} și ${lastPoint}`;
-      formattedPoints.push(mergedPoint);
+      if (lastPoint && secondLastPoint) {
+        const mergedPoint = `${secondLastPoint.replace(/\.$/, '')} și ${lastPoint}`;
+        formattedPoints.push(mergedPoint);
+      }
     }
     
     return formattedPoints;
@@ -45,7 +48,7 @@ const ServiceCard = ({ service }: ServiceCardProps) => {
         </p>
       )}
       
-      {!isConsultancyService && (
+      {!isConsultancyService && service.documents && service.documents.length > 0 && (
         <div className="mb-2">
           <span className="block text-gray-500 text-sm font-semibold mb-1 font-inter">
             Documente necesare:
