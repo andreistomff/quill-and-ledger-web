@@ -20,25 +20,42 @@ const serviceCategories: ServiceCategory[] = [
     services: [
       {
         name: "Contract de Vânzare-Cumpărare Imobil",
-        description: "Întocmire și autentificare contracte pentru tranzacții imobiliare.",
+        description: "Prin contractul de vânzare a unui imobil, vânzătorul îi transmite cumpărătorului proprietatea unui apartament, case, teren, pentru prețul convenit, stabilit în bani.",
         documents: [
-          "Act de identitate valabil",
-          "Documentele de proprietate ale imobilului",
-          "Certificat de urbanism și autorizații necesare"
+          "Acte de identitate părţi",
+          "Acte de proprietate imobil",
+          "Certificat fiscal - se obține prin notariat"
+          "Documentaţia cadastrală"
+          "Extras de carte funciară pentru autentificare - se obţine prin notariat"
+          "Certificat de performanță energetică, eliberat de un auditor energetic atestat"
+          "Pentru apartamente - adeverinţă de la asociaţia de proprietari"
+          "Ultima factură și chitanță privind plata la zi a utilităţilor imobilului"
         ],
-        price: "200 RON"
       },
       {
-        name: "Contract de Donație",
-        description: "Pentru transferul gratuit de bunuri între părți.",
+        name: "Antecontract Vânzare-Cumpărare (Precontract)",
+        description: "Antecontractul de vânzare-cumpărare a unui imobil, numit și promisiune de vânzare-cumpărare sau precontract, este un act încheiat la notariat în formă autentică prin care proprietarul unui imobil se obligă faţă de promitentul cumpărător să i-l vândă acestuia în viitor, la data convenită.",
         documents: [
-          "Act de identitate al donatorului și donatarului",
-          "Documentele de proprietate",
-          "Certificat medical (dacă este necesar)"
+          "Acte de identitate părţi",
+          "Acte de proprietate imobil",
+          "Documentaţia cadastrală"
+          "Extras de carte funciară pentru informare - se obține prin notariat"
         ],
-        price: "150 RON"
       }
     ]
+     name: "Contract de Donaţie Imobil",
+        description: "Prin contractul de donaţie, donatorul transmite donatarului, gratuit şi irevocabil, dreptul asupra unui bun.",
+        documents: [
+          "Acte de identitate părţi",
+          "Acte de proprietate imobil",
+          "Certificat fiscal - se obține prin notariat"
+          "Documentaţia cadastrală"
+          "Extras de carte funciară pentru autentificare - se obţine prin notariat"
+          "Pentru apartamente - adeverinţă de la asociaţia de proprietari"
+          "Ultima factură și chitanță privind plata la zi a utilităţilor imobilului"
+        ],
+      }
+    ],
   },
   {
     id: "succesiune",
@@ -53,7 +70,6 @@ const serviceCategories: ServiceCategory[] = [
           "Documentele de proprietate ale defunctului",
           "Certificatul de căsătorie (dacă este cazul)"
         ],
-        price: "300 RON"
       },
       {
         name: "Declarație de Moștenitor",
@@ -63,7 +79,6 @@ const serviceCategories: ServiceCategory[] = [
           "Actele de identitate",
           "Documentele care dovedesc relația de rudenie"
         ],
-        price: "100 RON"
       }
     ]
   },
@@ -80,7 +95,6 @@ const serviceCategories: ServiceCategory[] = [
           "Acordul de divorț semnat",
           "Dovada lipsei copiilor minori"
         ],
-        price: "250 RON"
       }
     ]
   },
@@ -96,7 +110,6 @@ const serviceCategories: ServiceCategory[] = [
           "Documente nesemnate ce necesită legalizare",
           "Documente suplimentare relevante"
         ],
-        price: "25 RON / semnătură"
       }
     ]
   },
@@ -112,7 +125,6 @@ const serviceCategories: ServiceCategory[] = [
           "Documente nesemnate ale societății",
           "Acte privind înființarea societății"
         ],
-        price: "40 RON / document"
       }
     ]
   }
