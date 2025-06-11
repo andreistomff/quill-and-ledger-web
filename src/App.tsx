@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import useScrollToTop from "./hooks/useScrollToTop";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import BackToTop from "./components/BackToTop";
 import Home from "./pages/Home";
 import Services from "./pages/Services";
 import NotFound from "./pages/NotFound";
@@ -28,6 +29,7 @@ const AppContent = () => {
         </Routes>
       </main>
       <Footer />
+      <BackToTop />
     </div>
   );
 };
