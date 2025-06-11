@@ -23,7 +23,8 @@ const OFFICE_HOURS = {
   note: "Recomandăm programări in avans"
 };
 
-const GOOGLE_MAPS_EMBED = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2849.5432!2d26.0977!3d44.4459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff4868c2c1b5%3A0x1f3d7c20bfb3b457!2sBulevardul%20Ion%20Mihalache%20106%2C%20București!5e0!3m2!1sro!2sro!4v1719848123456!5m2!1sro!2sro`;
+// Simplified and safe Google Maps embed URL
+const GOOGLE_MAPS_EMBED = `https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dOWTgNsCdL1X6g&q=Bulevardul+Ion+Mihalache+106+București+Sector+1&zoom=16&maptype=roadmap`;
 
 export default function ContactSection() {
   const [shouldLoadMap, setShouldLoadMap] = useState(false);
@@ -47,25 +48,6 @@ export default function ContactSection() {
     }
 
     return () => observer.disconnect();
-  }, []);
-
-  // Passive event listeners for scroll performance
-  useEffect(() => {
-    const handleTouchStart = (e: TouchEvent) => {
-      // Touch handling with passive listener
-    };
-
-    const handleTouchMove = (e: TouchEvent) => {
-      // Touch handling with passive listener
-    };
-
-    document.addEventListener('touchstart', handleTouchStart, { passive: true });
-    document.addEventListener('touchmove', handleTouchMove, { passive: true });
-
-    return () => {
-      document.removeEventListener('touchstart', handleTouchStart);
-      document.removeEventListener('touchmove', handleTouchMove);
-    };
   }, []);
 
   return (
