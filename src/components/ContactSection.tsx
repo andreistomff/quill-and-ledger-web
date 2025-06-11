@@ -29,9 +29,9 @@ export default function ContactSection() {
       id="contact"
       className="max-w-3xl mx-auto bg-card rounded-lg shadow-lg p-8 mt-16 mb-8 border border-border"
     >
-      <h2 className="font-playfair text-2xl font-bold text-primary mb-4 flex items-center gap-2">
-        <MapPin className="text-primary" aria-hidden="true" />
-        Contact & Vizitați-ne
+      <h2 className="font-playfair text-xl sm:text-2xl font-bold text-primary mb-4 flex items-center gap-2 leading-tight">
+        <MapPin className="text-primary flex-shrink-0" size={20} aria-hidden="true" />
+        <span className="break-words">Contact & Vizitați-ne</span>
       </h2>
       <div className="flex flex-col md:flex-row gap-8">
         <div className="flex-1 flex flex-col justify-between">
