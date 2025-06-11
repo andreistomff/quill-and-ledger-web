@@ -318,21 +318,12 @@ export const serviceCategories: ServiceCategory[] = [
           "Documente justificative pentru conținutul declarației",
           "Documentele de proprietate (dacă declarația se referă la bunuri)"
         ]
-      },
-      {
-        name: "Legalizări",
-        description: "Servicii complete de legalizare pentru diverse tipuri de documente și semnături.",
-        documents: [
-          "Act de identitate emis de autorități",
-          "Documentele ce necesită legalizare",
-          "Documente suplimentare specifice tipului de legalizare"
-        ]
       }
     ],
     legalizationServices: [
       {
-        name: "Legalizare Acte pentru Societăți",
-        description: "Pentru acte de înființare firmă, contracte comerciale și hotărâri.",
+        name: "Legalizări",
+        description: "Vă puteţi adresa biroului nostru notarial pentru a solicita următoarele servicii de legalizări:",
         legalizationTypes: {
           copii_inscrisuri: {
             label: "Legalizare copii de pe înscrisuri (acte)",
