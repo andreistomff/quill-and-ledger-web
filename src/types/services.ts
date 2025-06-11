@@ -16,9 +16,21 @@ export type InheritanceService = {
   };
 };
 
+export type LegalizationService = {
+  name: string;
+  description: string;
+  legalizationTypes: {
+    [key: string]: {
+      label: string;
+      documents: string[];
+    };
+  };
+};
+
 export type ServiceCategory = {
   id: string;
   title: string;
   services: Service[];
   inheritanceServices?: InheritanceService[];
+  legalizationServices?: LegalizationService[];
 };

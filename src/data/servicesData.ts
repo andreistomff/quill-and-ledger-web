@@ -285,15 +285,6 @@ export const serviceCategories: ServiceCategory[] = [
     title: "Alte Servicii",
     services: [
       {
-        name: "Legalizare Acte pentru Societăți",
-        description: "Pentru acte de înființare firmă, contracte comerciale și hotărâri.",
-        documents: [
-          "Act de identitate al administratorului/reprezentantului",
-          "Documente nesemnate ale societății",
-          "Acte privind înființarea societății"
-        ]
-      },
-      {
         name: "Consultanță Juridică",
         description: "Servicii de consultanță juridică profesională în diverse domenii ale dreptului civil și comercial.",
         documents: [
@@ -336,6 +327,36 @@ export const serviceCategories: ServiceCategory[] = [
           "Documentele ce necesită legalizare",
           "Documente suplimentare specifice tipului de legalizare"
         ]
+      }
+    ],
+    legalizationServices: [
+      {
+        name: "Legalizare Acte pentru Societăți",
+        description: "Pentru acte de înființare firmă, contracte comerciale și hotărâri.",
+        legalizationTypes: {
+          copii_inscrisuri: {
+            label: "Legalizare copii de pe înscrisuri (acte)",
+            documents: [
+              "Originalul sau duplicatul documentului",
+              "Cerere de legalizare - se va completa la notariat",
+              "Pentru copii din arhiva biroului notarial, actul de identitate"
+            ]
+          },
+          semnatura_sigiliu: {
+            label: "Legalizare semnătură sau sigiliu",
+            documents: [
+              "Exemplarele înscrisului, nesemnate",
+              "Acte de identitate",
+              "Pentru sigilii, sigiliul propriu-zis"
+            ]
+          },
+          traduceri: {
+            label: "Traduceri legalizate",
+            documents: [
+              "Vă rugăm contactați-ne pentru mai multe informații"
+            ]
+          }
+        }
       }
     ]
   }

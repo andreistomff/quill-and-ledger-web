@@ -3,6 +3,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ServiceCategory } from "@/types/services";
 import ServiceCard from "./ServiceCard";
 import InheritanceServiceCard from "./InheritanceServiceCard";
+import LegalizationServiceCard from "./LegalizationServiceCard";
 
 interface ServiceTabsProps {
   categories: ServiceCategory[];
@@ -30,6 +31,9 @@ const ServiceTabs = ({ categories }: ServiceTabsProps) => {
           ))}
           {category.inheritanceServices?.map((service, index) => (
             <InheritanceServiceCard key={index} service={service} />
+          ))}
+          {category.legalizationServices?.map((service, index) => (
+            <LegalizationServiceCard key={index} service={service} />
           ))}
         </TabsContent>
       ))}
