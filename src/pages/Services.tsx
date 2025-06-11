@@ -1,3 +1,4 @@
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 type Service = {
@@ -73,6 +74,7 @@ const serviceCategories: ServiceCategory[] = [
           "Documentele de proprietate ale defunctului",
           "Certificatul de căsătorie (dacă este cazul)"
         ],
+        price: "150 RON"
       },
       {
         name: "Declarație de Moștenitor",
@@ -82,6 +84,7 @@ const serviceCategories: ServiceCategory[] = [
           "Actele de identitate",
           "Documentele care dovedesc relația de rudenie"
         ],
+        price: "100 RON"
       }
     ]
   },
@@ -98,6 +101,7 @@ const serviceCategories: ServiceCategory[] = [
           "Acordul de divorț semnat",
           "Dovada lipsei copiilor minori"
         ],
+        price: "180 RON"
       }
     ]
   },
@@ -113,6 +117,7 @@ const serviceCategories: ServiceCategory[] = [
           "Documente nesemnate ce necesită legalizare",
           "Documente suplimentare relevante"
         ],
+        price: "50 RON"
       }
     ]
   },
@@ -128,6 +133,7 @@ const serviceCategories: ServiceCategory[] = [
           "Documente nesemnate ale societății",
           "Acte privind înființarea societății"
         ],
+        price: "75 RON"
       }
     ]
   }
