@@ -54,6 +54,38 @@ const serviceCategories: ServiceCategory[] = [
           "Pentru apartamente - adeverinţă de la asociaţia de proprietari",
           "Ultima factură și chitanță privind plata la zi a utilităţilor imobilului"
         ]
+      },
+      {
+        name: "Contract de Partaj",
+        description: "Contractul de partaj se încheie între coproprietarii unui bun pentru împărțirea bunului comun și transformarea cotelor-părți ideale în proprietăți distincte.",
+        documents: [
+          "Acte de identitate ale tuturor coproprietarilor",
+          "Acte de proprietate ale bunului comun",
+          "Documentația cadastrală",
+          "Extras de carte funciară pentru autentificare",
+          "Acordul tuturor coproprietarilor"
+        ]
+      },
+      {
+        name: "Contract de Schimb Imobiliar",
+        description: "Prin contractul de schimb, părțile își transmit reciproc proprietatea asupra unor bunuri imobile, fără plată de bani.",
+        documents: [
+          "Acte de identitate părţi",
+          "Acte de proprietate pentru ambele imobile",
+          "Certificat fiscal pentru ambele imobile",
+          "Documentaţia cadastrală pentru ambele imobile",
+          "Extras de carte funciară pentru autentificare pentru ambele imobile",
+          "Certificat de performanță energetică pentru ambele imobile"
+        ]
+      },
+      {
+        name: "Toate Contractele",
+        description: "Servicii complete pentru întocmirea și autentificarea oricărui tip de contract conform legislației în vigoare.",
+        documents: [
+          "Acte de identitate părţi",
+          "Documente specifice obiectului contractului",
+          "Documente suplimentare conform tipului de contract"
+        ]
       }
     ]
   },
@@ -87,13 +119,27 @@ const serviceCategories: ServiceCategory[] = [
     title: "Divorț",
     services: [
       {
-        name: "Divorț prin Acordul Părților",
-        description: "Procedura de divorț consensual pentru cuplurile fără copii minori.",
+        name: "Divorț prin Acordul Părților fără Copii Minori",
+        description: "Procedura de divorț consensual pentru cuplurile fără copii minori, realizată prin înțelegerea ambilor soți.",
         documents: [
           "Actele de identitate ale soților",
           "Certificatul de căsătorie",
           "Acordul de divorț semnat",
-          "Dovada lipsei copiilor minori"
+          "Dovada lipsei copiilor minori",
+          "Convenția privind bunurile comune (dacă este cazul)"
+        ]
+      },
+      {
+        name: "Divorț prin Acordul Părților cu Copii Minori",
+        description: "Procedura de divorț consensual pentru cuplurile cu copii minori, care necesită aprobarea instanței de judecată.",
+        documents: [
+          "Actele de identitate ale soților",
+          "Certificatul de căsătorie",
+          "Actele de naștere ale copiilor minori",
+          "Acordul de divorț semnat",
+          "Convenția privind exercitarea autorității părintești",
+          "Convenția privind pensia de întreținere",
+          "Convenția privind bunurile comune (dacă este cazul)"
         ]
       }
     ]
@@ -124,6 +170,50 @@ const serviceCategories: ServiceCategory[] = [
           "Act de identitate al administratorului/reprezentantului",
           "Documente nesemnate ale societății",
           "Acte privind înființarea societății"
+        ]
+      },
+      {
+        name: "Consultanță Juridică",
+        description: "Servicii de consultanță juridică profesională în diverse domenii ale dreptului civil și comercial.",
+        documents: [
+          "Act de identitate",
+          "Documentele relevante pentru consultația solicitată"
+        ]
+      },
+      {
+        name: "Convenție Matrimonială",
+        description: "Întocmirea convenției matrimoniale pentru stabilirea regimului bunurilor între soți.",
+        documents: [
+          "Actele de identitate ale viitorilor soți",
+          "Documentele privind bunurile ce fac obiectul convenției",
+          "Certificatul de căsătorie (pentru convenții post-matrimoniale)"
+        ]
+      },
+      {
+        name: "Dată Certă",
+        description: "Acordarea datei certe documentelor private pentru a le conferi opozabilitate față de terți.",
+        documents: [
+          "Act de identitate",
+          "Documentul pentru care se solicită data certă",
+          "Documente justificative (dacă este cazul)"
+        ]
+      },
+      {
+        name: "Declarații Notariale",
+        description: "Primirea și autentificarea declarațiilor unilaterale de voință în formă notarială.",
+        documents: [
+          "Act de identitate al declarantului",
+          "Documente justificative pentru conținutul declarației",
+          "Documentele de proprietate (dacă declarația se referă la bunuri)"
+        ]
+      },
+      {
+        name: "Legalizări",
+        description: "Servicii complete de legalizare pentru diverse tipuri de documente și semnături.",
+        documents: [
+          "Act de identitate emis de autorități",
+          "Documentele ce necesită legalizare",
+          "Documente suplimentare specifice tipului de legalizare"
         ]
       }
     ]
