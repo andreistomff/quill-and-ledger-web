@@ -10,7 +10,7 @@ export default function Home() {
           Biroul Notarial Mariana Cîrstocea
         </h1>
         <p className="max-w-2xl mx-auto text-lg text-gray-600 mb-12 font-inter leading-relaxed">
-          Biroul notarial Mariana Cîrstocea ofera serviciile care sunt prevazute de Legea notarilor publici si a activitatii notariale.
+          Biroul notarial Mariana Cîrstocea oferă serviciile care sunt prevăzute de Legea notarilor publici și a activității notariale.
         </p>
         <div className="mb-16">
           <Link
