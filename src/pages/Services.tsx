@@ -1,5 +1,6 @@
-
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { useState } from "react";
 
 type Service = {
   name: string;
@@ -7,10 +8,22 @@ type Service = {
   documents: string[];
 };
 
+type InheritanceService = {
+  name: string;
+  description: string;
+  assetTypes: {
+    [key: string]: {
+      label: string;
+      documents: string[];
+    };
+  };
+};
+
 type ServiceCategory = {
   id: string;
   title: string;
   services: Service[];
+  inheritanceServices?: InheritanceService[];
 };
 
 const serviceCategories: ServiceCategory[] = [
@@ -173,16 +186,83 @@ const serviceCategories: ServiceCategory[] = [
   {
     id: "succesiune",
     title: "Succesiune",
-    services: [
+    services: [],
+    inheritanceServices: [
       {
         name: "Acte necesare succesiune - eliberare certificat moștenitor",
         description: "Puteți dezbate succesiunea la noi doar dacă ultimul domiciliu al defunctului a fost în București.",
-        documents: [
-          "Certificatul de deces",
-          "Act de identitate al moștenitorilor",
-          "Documentele de proprietate ale defunctului",
-          "Certificatul de căsătorie (dacă este cazul)"
-        ]
+        assetTypes: {
+          imobil: {
+            label: "Imobil (apartament, casă, teren)",
+            documents: [
+              "Certificatul de deces",
+              "Act de identitate al moștenitorilor",
+              "Actele de proprietate ale imobilului (contract, act de donație, certificat de moștenitor etc.)",
+              "Certificatul de căsătorie al defunctului (dacă este cazul)",
+              "Certificatul de căsătorie al moștenitorilor (dacă este cazul)",
+              "Extras de carte funciară pentru informare - se obţine prin notariat",
+              "Documentația cadastrală a imobilului",
+              "Certificat fiscal pentru imobil - se obține prin notariat",
+              "Pentru apartamente - adeverință de la asociația de proprietari"
+            ]
+          },
+          cont_bancar: {
+            label: "Cont bancar sau depozit",
+            documents: [
+              "Certificatul de deces",
+              "Act de identitate al moștenitorilor",
+              "Certificatul de căsătorie al defunctului (dacă este cazul)",
+              "Certificatul de căsătorie al moștenitorilor (dacă este cazul)",
+              "Adeverință de la bancă privind existența contului/depozitului",
+              "Ultimul extras de cont sau dovada soldului"
+            ]
+          },
+          autoturism: {
+            label: "Autoturism",
+            documents: [
+              "Certificatul de deces",
+              "Act de identitate al moștenitorilor",
+              "Certificatul de căsătorie al defunctului (dacă este cazul)",
+              "Certificatul de căsătorie al moștenitorilor (dacă este cazul)",
+              "Talonul de înmatriculare al autovehicolului",
+              "Cartea de identitate a autovehicolului",
+              "Certificat fiscal pentru autovehicul - se obține prin notariat"
+            ]
+          },
+          pensie_privata: {
+            label: "Pensie privată",
+            documents: [
+              "Certificatul de deces",
+              "Act de identitate al moștenitorilor",
+              "Certificatul de căsătorie al defunctului (dacă este cazul)",
+              "Certificatul de căsătorie al moștenitorilor (dacă este cazul)",
+              "Contractul de pensie privată sau adeverință de la administratorul fondului",
+              "Ultimul extras de cont de la fondul de pensii"
+            ]
+          },
+          actiuni: {
+            label: "Acțiuni",
+            documents: [
+              "Certificatul de deces",
+              "Act de identitate al moștenitorilor",
+              "Certificatul de căsătorie al defunctului (dacă este cazul)",
+              "Certificatul de căsătorie al moștenitorilor (dacă este cazul)",
+              "Certificatele de acțiuni sau adeverință de la societatea emitentă",
+              "Extras de la Depozitarul Central (dacă este cazul)"
+            ]
+          },
+          loc_veci: {
+            label: "Loc de veci",
+            documents: [
+              "Certificatul de deces",
+              "Act de identitate al moștenitorilor",
+              "Certificatul de căsătorie al defunctului (dacă este cazul)",
+              "Certificatul de căsătorie al moștenitorilor (dacă este cazul)",
+              "Contractul de concesiune pentru locul de veci",
+              "Chitanțele de plată a taxelor de întreținere"
+            ]
+          }
+        }
       }
     ]
   },
@@ -315,6 +395,54 @@ const ServiceCard = ({ service }: { service: Service }) => (
   </div>
 );
 
+const InheritanceServiceCard = ({ service }: { service: InheritanceService }) => {
+  const [selectedAssetType, setSelectedAssetType] = useState<string>("");
+
+  return (
+    <div className="border-l-4 border-primary/20 pl-4 bg-white rounded-lg p-6 shadow-sm border border-gray-100">
+      <div className="mb-2">
+        <h4 className="font-playfair text-lg font-semibold text-primary">
+          {service.name}
+        </h4>
+      </div>
+      <p className="text-gray-700 font-inter mb-4">
+        {service.description}
+      </p>
+      
+      <div className="mb-4">
+        <label className="block text-gray-700 text-sm font-semibold mb-2 font-inter">
+          Selectați tipul de bun moștenit:
+        </label>
+        <Select value={selectedAssetType} onValueChange={setSelectedAssetType}>
+          <SelectTrigger className="w-full">
+            <SelectValue placeholder="Alegeți tipul de bun..." />
+          </SelectTrigger>
+          <SelectContent>
+            {Object.entries(service.assetTypes).map(([key, assetType]) => (
+              <SelectItem key={key} value={key}>
+                {assetType.label}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+      </div>
+
+      {selectedAssetType && (
+        <div className="mb-2">
+          <span className="block text-gray-500 text-sm font-semibold mb-1 font-inter">
+            Documente necesare pentru {service.assetTypes[selectedAssetType].label.toLowerCase()}:
+          </span>
+          <ul className="list-disc list-inside space-y-1 text-gray-600 text-[15px] font-inter">
+            {service.assetTypes[selectedAssetType].documents.map((doc, idx) => (
+              <li key={idx}>{doc}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
+  );
+};
+
 export default function Services() {
   return (
     <div className="max-w-4xl mx-auto py-8 px-4">
@@ -339,6 +467,9 @@ export default function Services() {
           <TabsContent key={category.id} value={category.id} className="space-y-6">
             {category.services.map((service, index) => (
               <ServiceCard key={index} service={service} />
+            ))}
+            {category.inheritanceServices?.map((service, index) => (
+              <InheritanceServiceCard key={index} service={service} />
             ))}
           </TabsContent>
         ))}
