@@ -18,11 +18,11 @@ export default function Navbar() {
         <Scale
           size={24}
           strokeWidth={2.3}
-          className="text-primary md:size-8 mb-0.5"
+          className="text-primary md:size-8 mb-0.5 hidden sm:block"
           aria-label="Birou Notarial"
         />
         <span className="hidden sm:inline">Biroul Notarial Mariana Cîrstocea</span>
-        <span className="sm:hidden">Birou Notarial</span>
+        <span className="sm:hidden text-sm leading-tight">Biroul Notarial Mariana Cîrstocea</span>
       </Link>
       <ul className="flex gap-3 md:gap-6">
         {navItems.map((item) => {
