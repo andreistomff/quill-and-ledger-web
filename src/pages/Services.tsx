@@ -175,22 +175,13 @@ const serviceCategories: ServiceCategory[] = [
     title: "Succesiune",
     services: [
       {
-        name: "Deschidere Succesiune",
-        description: "Procedura legală pentru moștenirea bunurilor defunctului.",
+        name: "Acte necesare succesiune - eliberare certificat moștenitor",
+        description: "Puteți dezbate succesiunea la noi doar dacă ultimul domiciliu al defunctului a fost în București.",
         documents: [
           "Certificatul de deces",
           "Act de identitate al moștenitorilor",
           "Documentele de proprietate ale defunctului",
           "Certificatul de căsătorie (dacă este cazul)"
-        ]
-      },
-      {
-        name: "Declarație de Moștenitor",
-        description: "Documentul prin care se confirmă calitatea de moștenitor.",
-        documents: [
-          "Certificatul de deces",
-          "Actele de identitate",
-          "Documentele care dovedesc relația de rudenie"
         ]
       }
     ]
