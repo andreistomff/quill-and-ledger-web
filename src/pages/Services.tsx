@@ -1,3 +1,4 @@
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 type Service = {
@@ -87,9 +88,9 @@ const serviceCategories: ServiceCategory[] = [
           "Acte de identitate părţi",
           "Acte de proprietate asupra imobilului ce face obiectul contractului",
           "Certificat fiscal pe numele proprietarului, eliberat de Administraţia Financiară competentă",
-          "Documentaţia cadastrală a bunului imobil, întocmită de un expert cadastral autorizat "
-          "Extras de carte funciară pentru autentificare "
-          "Pentru apartamente, adeverinţa eliberată de asociaţia de proprietari sau locatari care sa arate că proprietarul este la zi cu datoriile faţă de aceasta "
+          "Documentaţia cadastrală a bunului imobil, întocmită de un expert cadastral autorizat",
+          "Extras de carte funciară pentru autentificare",
+          "Pentru apartamente, adeverinţa eliberată de asociaţia de proprietari sau locatari care sa arate că proprietarul este la zi cu datoriile faţă de aceasta"
         ]
       },
       {
@@ -101,7 +102,7 @@ const serviceCategories: ServiceCategory[] = [
           "Certificat fiscal, în termen de valabilitate, emis pe numele proprietarului de către Administraţia Financiară",
           "Doar dacă în urma dezmembrării rezultă mai mult de două loturi - certificat de urbanism în termen de valabilitate;",
           "Documentaţia cadastrală a bunului imobil, întocmită de un expert cadastral autorizat",
-          "Extras de carte funciară pentru autentificare, se obţine prin notariat"
+          "Extras de carte funciară pentru autentificare, se obţine prin notariat",
           "Doar pentru persoanele juridice: certificat de înregistrare, act constitutiv, hotărâre AGA"
         ]
       },
@@ -113,7 +114,7 @@ const serviceCategories: ServiceCategory[] = [
           "Certificat de căsătorie proprietari (dacă este cazul)",
           "Actul de proprietate al bunului de închiriat",
           "Dacă imobilul este intabulat, documentația cadastrală și încheierea de înscriere în cartea funciară;",
-          "Extras de carte funciară pentru informare, se obtine prin notariat"
+          "Extras de carte funciară pentru informare, se obtine prin notariat",
           "Certificat de performanță energetică"
         ]
       },
@@ -124,7 +125,7 @@ const serviceCategories: ServiceCategory[] = [
           "Acte de identitate părţi",
           "Talon şi carte de identitate maşină",
           "Certificat fiscal - se obține prin notariat",
-          "Pentru mașini cumpărate în leasing: acordul firmei de leasing",
+          "Pentru mașini cumpărate în leasing: acordul firmei de leasing"
         ]
       },
       {
@@ -133,7 +134,7 @@ const serviceCategories: ServiceCategory[] = [
         documents: [
           "Acte de identitate părţi",
           "Acte de proprietate imobil",
-          "Pentru persoanele juridice: acte de funcţionare Societate / PFA",
+          "Pentru persoanele juridice: acte de funcţionare Societate / PFA"
         ]
       },
       {
@@ -141,7 +142,7 @@ const serviceCategories: ServiceCategory[] = [
         description: "Contractul prin care părțile implicate într-un accident auto ajung la o înțelegere amiabilă privind despăgubirile și renunță la orice pretenții ulterioare.",
         documents: [
           "Acte de identitate părţi",
-          "După caz, proces-verbal eliberat de agentul constatator, talonul mașinii/mașinilor implicate în accident.",
+          "După caz, proces-verbal eliberat de agentul constatator, talonul mașinii/mașinilor implicate în accident."
         ]
       },
       {
@@ -152,7 +153,7 @@ const serviceCategories: ServiceCategory[] = [
           "Acte de proprietate asupra bunului ce face obiectul tranzacţiei",
           "Certificat fiscal pe numele proprietarului, eliberat de Administraţia Financiară competentă",
           "Extras de carte funciară de autentificare - se obţine prin notariat",
-          "Documentaţia cadastrală a bunului imobil, întocmită de un expert cadastral autorizat"",
+          "Documentaţia cadastrală a bunului imobil, întocmită de un expert cadastral autorizat"
         ]
       },
       {
