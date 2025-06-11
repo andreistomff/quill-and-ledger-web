@@ -1,4 +1,3 @@
-
 import { ServiceCategory } from "@/types/services";
 
 export const serviceCategories: ServiceCategory[] = [
@@ -170,71 +169,71 @@ export const serviceCategories: ServiceCategory[] = [
           imobil: {
             label: "Imobil (apartament, casă, teren)",
             documents: [
-              "Certificatul de deces",
-              "Act de identitate al moștenitorilor",
-              "Actele de proprietate ale imobilului (contract, act de donație, certificat de moștenitor etc.)",
-              "Certificatul de căsătorie al defunctului (dacă este cazul)",
-              "Certificatul de căsătorie al moștenitorilor (dacă este cazul)",
-              "Extras de carte funciară pentru informare - se obţine prin notariat",
-              "Documentația cadastrală a imobilului",
-              "Certificat fiscal pentru imobil - se obține prin notariat",
-              "Pentru apartamente - adeverință de la asociația de proprietari"
+              "Acte identitate moștenitori",
+              "Certificat de deces",
+              "Acte stare civilă moștenitori",
+              "2 martori",
+              "Dacă există, testamentul",
+              "Act de proprietate bun imobil",
+              "Certificat fiscal imobil"
             ]
           },
           cont_bancar: {
             label: "Cont bancar sau depozit",
             documents: [
-              "Certificatul de deces",
-              "Act de identitate al moștenitorilor",
-              "Certificatul de căsătorie al defunctului (dacă este cazul)",
-              "Certificatul de căsătorie al moștenitorilor (dacă este cazul)",
-              "Adeverință de la bancă privind existența contului/depozitului",
-              "Ultimul extras de cont sau dovada soldului"
+              "Acte identitate moștenitori",
+              "Certificat de deces",
+              "Acte stare civilă moștenitori",
+              "2 martori",
+              "Dacă există, testamentul",
+              "Extras de cont bancar"
             ]
           },
           autoturism: {
             label: "Autoturism",
             documents: [
-              "Certificatul de deces",
-              "Act de identitate al moștenitorilor",
-              "Certificatul de căsătorie al defunctului (dacă este cazul)",
-              "Certificatul de căsătorie al moștenitorilor (dacă este cazul)",
-              "Talonul de înmatriculare al autovehicolului",
-              "Cartea de identitate a autovehicolului",
-              "Certificat fiscal pentru autovehicul - se obține prin notariat"
+              "Acte identitate moștenitori",
+              "Certificat de deces",
+              "Acte stare civilă moștenitori",
+              "2 martori",
+              "Dacă există, testamentul",
+              "Talon și carte de identitate auto",
+              "Certificat fiscal automobil"
             ]
           },
           pensie_privata: {
             label: "Pensie privată",
             documents: [
-              "Certificatul de deces",
-              "Act de identitate al moștenitorilor",
-              "Certificatul de căsătorie al defunctului (dacă este cazul)",
-              "Certificatul de căsătorie al moștenitorilor (dacă este cazul)",
-              "Contractul de pensie privată sau adeverință de la administratorul fondului",
-              "Ultimul extras de cont de la fondul de pensii"
+              "Acte identitate moștenitori",
+              "Certificat de deces",
+              "Acte stare civilă moștenitori",
+              "2 martori",
+              "Dacă există, testamentul",
+              "Nume administrator fond pensii"
             ]
           },
           actiuni: {
             label: "Acțiuni",
             documents: [
-              "Certificatul de deces",
-              "Act de identitate al moștenitorilor",
-              "Certificatul de căsătorie al defunctului (dacă este cazul)",
-              "Certificatul de căsătorie al moștenitorilor (dacă este cazul)",
-              "Certificatele de acțiuni sau adeverință de la societatea emitentă",
-              "Extras de la Depozitarul Central (dacă este cazul)"
+              "Acte identitate moștenitori",
+              "Certificat de deces",
+              "Acte stare civilă moștenitori",
+              "2 martori",
+              "Dacă există, testamentul",
+              "Certificat de acționar, dacă există",
+              "Extras de cont Depozitar Central"
             ]
           },
           loc_veci: {
             label: "Loc de veci",
             documents: [
-              "Certificatul de deces",
-              "Act de identitate al moștenitorilor",
-              "Certificatul de căsătorie al defunctului (dacă este cazul)",
-              "Certificatul de căsătorie al moștenitorilor (dacă este cazul)",
-              "Contractul de concesiune pentru locul de veci",
-              "Chitanțele de plată a taxelor de întreținere"
+              "Acte identitate moștenitori",
+              "Certificat de deces",
+              "Acte stare civilă moștenitori",
+              "2 martori",
+              "Dacă există, testamentul",
+              "Act concesiune loc de veci",
+              "Adeverinţă valoare loc de veci"
             ]
           }
         }
