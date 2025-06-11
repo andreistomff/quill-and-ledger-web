@@ -1,3 +1,4 @@
+
 import { MapPin, Navigation, Phone, Mail, Smartphone, Clock } from "lucide-react";
 
 const ADDRESS = {
@@ -69,25 +70,27 @@ export default function ContactSection() {
               <p className="text-muted-foreground ml-7">{OFFICE_HOURS.schedule}</p>
               <p className="text-sm text-muted-foreground ml-7 mt-1 italic">{OFFICE_HOURS.note}</p>
             </div>
-
+          </div>
+          
+          <div className="flex flex-col gap-3">
             <a
               href={`https://maps.google.com/?q=${ADDRESS.googleMapsQuery}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center text-primary hover:text-primary/80 transition-colors text-sm mb-6"
+              className="inline-flex items-center bg-primary text-primary-foreground text-base font-semibold py-2 px-4 rounded-lg shadow hover:bg-primary/90 transition-colors w-max"
             >
-              <MapPin className="w-4 h-4 mr-1" />
+              <MapPin className="mr-2" size={20} />
               Vizualizați pe Google Maps
             </a>
+            <a
+              href="https://www.waze.com/ul?ll=44.461971%2C26.073061&navigate=yes"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center bg-primary text-primary-foreground text-base font-semibold py-2 px-4 rounded-lg shadow hover:bg-primary/90 transition-colors w-max"
+            >
+              <Navigation className="mr-2" /> Rută rapidă cu Waze
+            </a>
           </div>
-          <a
-            href="https://www.waze.com/ul?ll=44.461971%2C26.073061&navigate=yes"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center mt-4 bg-primary text-primary-foreground text-base font-semibold py-2 px-4 rounded-lg shadow hover:bg-primary/90 transition-colors w-max"
-          >
-            <Navigation className="mr-2" /> Rută rapidă cu Waze
-          </a>
         </div>
 
         <div className="flex-1 min-w-[250px] h-[220px] md:h-auto rounded-lg overflow-hidden border border-border shadow">
