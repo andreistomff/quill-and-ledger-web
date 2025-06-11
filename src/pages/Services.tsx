@@ -1,4 +1,5 @@
 
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 type Service = {
@@ -87,7 +88,7 @@ const serviceCategories: ServiceCategory[] = [
   },
   {
     id: "procuri",
-    title: "Procuri și Alte Servicii",
+    title: "Procuri",
     services: [
       {
         name: "Legalizare Documente Standard",
@@ -98,7 +99,13 @@ const serviceCategories: ServiceCategory[] = [
           "Documente suplimentare relevante"
         ],
         price: "25 RON / semnătură"
-      },
+      }
+    ]
+  },
+  {
+    id: "alte-servicii",
+    title: "Alte Servicii",
+    services: [
       {
         name: "Legalizare Acte pentru Societăți",
         description: "Pentru acte de înființare firmă, contracte comerciale și hotărâri.",
@@ -145,7 +152,7 @@ export default function Services() {
       </h2>
       
       <Tabs defaultValue="contracte" className="w-full">
-        <TabsList className="grid w-full grid-cols-4 mb-8">
+        <TabsList className="grid w-full grid-cols-5 mb-8">
           {serviceCategories.map((category) => (
             <TabsTrigger 
               key={category.id} 
@@ -168,3 +175,4 @@ export default function Services() {
     </div>
   );
 }
+
