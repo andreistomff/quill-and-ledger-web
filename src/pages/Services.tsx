@@ -1,5 +1,5 @@
 
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 type Service = {
   name: string;
@@ -113,55 +113,58 @@ const serviceCategories: ServiceCategory[] = [
   }
 ];
 
+const ServiceCard = ({ service }: { service: Service }) => (
+  <div className="border-l-4 border-primary/20 pl-4 bg-white rounded-lg p-6 shadow-sm border border-gray-100">
+    <h4 className="font-playfair text-lg font-semibold mb-2 text-primary">
+      {service.name}
+    </h4>
+    <p className="text-gray-700 font-inter mb-3">
+      {service.description}
+    </p>
+    <div className="mb-2">
+      <span className="block text-gray-500 text-sm font-semibold mb-1 font-inter">
+        Documente necesare:
+      </span>
+      <ul className="list-disc list-inside space-y-1 text-gray-600 text-[15px] font-inter">
+        {service.documents.map((doc, idx) => (
+          <li key={idx}>{doc}</li>
+        ))}
+      </ul>
+    </div>
+    <div className="font-semibold text-primary font-inter text-lg mt-4">
+      Preț: {service.price}
+    </div>
+  </div>
+);
+
 export default function Services() {
   return (
     <div className="max-w-4xl mx-auto py-8 px-4">
-      <h2 className="font-playfair text-3xl font-bold mb-6 text-primary">
+      <h2 className="font-playfair text-3xl font-bold mb-8 text-primary">
         Serviciile noastre
       </h2>
       
-      <Accordion type="single" collapsible className="space-y-4">
+      <Tabs defaultValue="contracte" className="w-full">
+        <TabsList className="grid w-full grid-cols-4 mb-8">
+          {serviceCategories.map((category) => (
+            <TabsTrigger 
+              key={category.id} 
+              value={category.id}
+              className="font-inter text-sm"
+            >
+              {category.title}
+            </TabsTrigger>
+          ))}
+        </TabsList>
+
         {serviceCategories.map((category) => (
-          <AccordionItem 
-            key={category.id} 
-            value={category.id}
-            className="rounded-lg border border-gray-200 shadow-sm bg-white"
-          >
-            <AccordionTrigger className="px-6 py-4 hover:no-underline">
-              <h3 className="font-playfair text-xl font-semibold text-primary text-left">
-                {category.title}
-              </h3>
-            </AccordionTrigger>
-            <AccordionContent className="px-6 pb-6">
-              <div className="space-y-6">
-                {category.services.map((service, index) => (
-                  <div key={index} className="border-l-4 border-primary/20 pl-4">
-                    <h4 className="font-playfair text-lg font-semibold mb-2 text-primary">
-                      {service.name}
-                    </h4>
-                    <p className="text-gray-700 font-inter mb-3">
-                      {service.description}
-                    </p>
-                    <div className="mb-2">
-                      <span className="block text-gray-500 text-sm font-semibold mb-1 font-inter">
-                        Documente necesare:
-                      </span>
-                      <ul className="list-disc list-inside space-y-1 text-gray-600 text-[15px] font-inter">
-                        {service.documents.map((doc, idx) => (
-                          <li key={idx}>{doc}</li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div className="font-semibold text-primary font-inter text-lg mt-4">
-                      Preț: {service.price}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </AccordionContent>
-          </AccordionItem>
+          <TabsContent key={category.id} value={category.id} className="space-y-6">
+            {category.services.map((service, index) => (
+              <ServiceCard key={index} service={service} />
+            ))}
+          </TabsContent>
         ))}
-      </Accordion>
+      </Tabs>
     </div>
   );
 }
