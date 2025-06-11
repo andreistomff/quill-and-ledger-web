@@ -1,4 +1,3 @@
-
 import { ServiceCategory } from "@/types/services";
 
 export const serviceCategories: ServiceCategory[] = [
@@ -293,19 +292,14 @@ export const serviceCategories: ServiceCategory[] = [
       {
         name: "Convenție Matrimonială",
         description: "Soţii pot alege prin convenţie matrimonială între regimul separaţiei de bunuri sau cel al comunităţii convenţionale. Când soţii nu încheie o convenţie matrimonială, li se va aplica de drept regimul comunităţii legale. Pentru mai multe va rugam contactati-ne.",
-        documents: [
-          "Actele de identitate ale viitorilor soți",
-          "Documentele privind bunurile ce fac obiectul convenției",
-          "Certificatul de căsătorie (pentru convenții post-matrimoniale)"
-        ]
+        documents: []
       },
       {
         name: "Dată Certă",
-        description: "Acordarea datei certe documentelor private pentru a le conferi opozabilitate față de terți.",
+        description: "Prin darea de dată certă înscrisului sub semnătură privată de către notarul public, data menționată în acest înscris devine opozabilă și altor persoane decât celor care l-au semnat.",
         documents: [
-          "Act de identitate",
-          "Documentul pentru care se solicită data certă",
-          "Documente justificative (dacă este cazul)"
+          "Actul căruia urmează să i se dea dată certă (original și nesemnat)",
+          "Actul de identitate al solicitantului (BI, CI etc.)"
         ]
       },
       {
