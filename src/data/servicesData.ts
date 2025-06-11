@@ -270,12 +270,12 @@ export const serviceCategories: ServiceCategory[] = [
     title: "Procuri",
     services: [
       {
-        name: "Legalizare Documente Standard",
-        description: "Pentru procuri, declarații pe proprie răspundere, formulare medicale și altele.",
+        name: "Procură sau împuternicire",
+        description: "Prin procura notarială puteți împuternici o altă persoană să încheie acte juridice în numele dvs. De exemplu: reprezentare la notariat pentru vânzarea unui imobil, la dezbaterea succesiunii, în fața instanței sau a unei instituții bancare.",
         documents: [
-          "Act de identitate emis de autorități",
-          "Documente nesemnate ce necesită legalizare",
-          "Documente suplimentare relevante"
+          "Act de identitate mandant, în original",
+          "Copie act de identitate mandatar",
+          "Documente suplimentare relevante - va rugam contactati-ne pentru detalii"
         ]
       }
     ]
