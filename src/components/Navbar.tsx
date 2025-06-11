@@ -11,7 +11,10 @@ export default function Navbar() {
   const location = useLocation();
   return (
     <nav className="flex items-center justify-between py-4 px-6 border-b border-gray-200 bg-white">
-      <span className="flex items-center gap-2 font-playfair text-xl md:text-2xl font-bold tracking-tight text-primary">
+      <Link 
+        to="/" 
+        className="flex items-center gap-2 font-playfair text-xl md:text-2xl font-bold tracking-tight text-primary hover:text-primary/90 transition-colors"
+      >
         <Scale
           size={32}
           strokeWidth={2.3}
@@ -19,7 +22,7 @@ export default function Navbar() {
           aria-label="Birou Notarial"
         />
         Biroul Notarial Mariana Cîrstocea
-      </span>
+      </Link>
       <ul className="flex gap-6">
         {navItems.map((item) => {
           const active =
