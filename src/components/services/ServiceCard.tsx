@@ -1,4 +1,3 @@
-
 import { Service } from "@/types/services";
 
 interface ServiceCardProps {
@@ -11,7 +10,17 @@ const ServiceCard = ({ service }: ServiceCardProps) => {
   // Split the consultancy service description into bullet points
   const formatConsultancyDescription = (description: string) => {
     const points = description.split('. ').filter(point => point.trim().length > 0);
-    return points.map(point => point.endsWith('.') ? point : point + '.');
+    const formattedPoints = points.map(point => point.endsWith('.') ? point : point + '.');
+    
+    // Merge the last two bullet points if there are at least 2 points
+    if (formattedPoints.length >= 2) {
+      const lastPoint = formattedPoints.pop();
+      const secondLastPoint = formattedPoints.pop();
+      const mergedPoint = `${secondLastPoint.replace(/\.$/, '')} și ${lastPoint}`;
+      formattedPoints.push(mergedPoint);
+    }
+    
+    return formattedPoints;
   };
   
   return (
