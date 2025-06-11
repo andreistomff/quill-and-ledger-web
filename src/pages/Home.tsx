@@ -37,7 +37,7 @@ export default function Home() {
       <div className="min-h-screen flex flex-col justify-center items-center py-16 px-4 bg-background">
         <div className="text-center max-w-4xl mx-auto">
           <header>
-            <h1 className="font-playfair text-4xl md:text-5xl font-bold tracking-tight text-primary mb-6">
+            <h1 className="font-playfair text-4xl md:text-5xl font-bold tracking-tight text-foreground mb-6">
               Biroul Notarial Mariana Cîrstocea
             </h1>
             <p className="max-w-2xl mx-auto text-lg text-muted-foreground mb-12 font-inter leading-relaxed">
@@ -48,8 +48,8 @@ export default function Home() {
           <div className="mb-16">
             <Link
               to="/services"
-              className="inline-block bg-primary text-primary-foreground font-semibold px-8 py-4 rounded shadow transition hover:bg-primary/90 font-inter text-lg"
-              aria-label="Vizualizează toate serviciile notariale oferite"
+              className="inline-flex items-center justify-center bg-primary text-primary-foreground font-semibold px-8 py-4 rounded shadow transition hover:bg-primary/90 font-inter text-lg min-touch-target focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+              aria-label="Navigare la pagina cu toate serviciile notariale oferite de biroul nostru"
             >
               Vizualizează Serviciile
             </Link>
