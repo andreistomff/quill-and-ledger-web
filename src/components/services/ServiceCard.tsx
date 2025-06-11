@@ -7,6 +7,7 @@ interface ServiceCardProps {
 
 const ServiceCard = ({ service }: ServiceCardProps) => {
   const isConsultancyService = service.name === "Consultanță Juridică";
+  const isMatrimonialConventionService = service.name === "Convenție Matrimonială";
   
   // Split the consultancy service description into bullet points
   const formatConsultancyDescription = (description: string) => {
@@ -48,7 +49,7 @@ const ServiceCard = ({ service }: ServiceCardProps) => {
         </p>
       )}
       
-      {!isConsultancyService && service.documents && service.documents.length > 0 && (
+      {!isConsultancyService && !isMatrimonialConventionService && service.documents && service.documents.length > 0 && (
         <div className="mb-2">
           <span className="block text-gray-500 text-sm font-semibold mb-1 font-inter">
             Documente necesare:
