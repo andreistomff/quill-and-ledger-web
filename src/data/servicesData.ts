@@ -246,26 +246,21 @@ export const serviceCategories: ServiceCategory[] = [
     services: [
       {
         name: "Divorț prin Acordul Părților fără Copii Minori",
-        description: "Procedura de divorț consensual pentru cuplurile fără copii minori, realizată prin înțelegerea ambilor soți.",
+        description: "Notarul public poate constata divortul prin acordul sotilor si poate elibera certificatul de divort si cand acestia nu au copii minori.",
         documents: [
           "Actele de identitate ale soților",
-          "Certificatul de căsătorie",
-          "Acordul de divorț semnat",
-          "Dovada lipsei copiilor minori",
-          "Convenția privind bunurile comune (dacă este cazul)"
+          "Certificate de naştere (în original sau copie legalizată)",
+          "certificat de căsătorie (în original)"
         ]
       },
       {
         name: "Divorț prin Acordul Părților cu Copii Minori",
-        description: "Procedura de divorț consensual pentru cuplurile cu copii minori, care necesită aprobarea instanței de judecată.",
+        description: "Notarul public poate constata divorțul prin acordul soţilor şi elibera certificatul de divorţ, inclusiv dacă există copii minori născuţi din căsătorie, din afara ei sau adoptaţi.",
         documents: [
           "Actele de identitate ale soților",
-          "Certificatul de căsătorie",
-          "Actele de naștere ale copiilor minori",
-          "Acordul de divorț semnat",
-          "Convenția privind exercitarea autorității părintești",
-          "Convenția privind pensia de întreținere",
-          "Convenția privind bunurile comune (dacă este cazul)"
+          "Certificate de naştere (original sau copie legalizată)",
+          "Certificat de căsătorie (original)",
+          "Certificat de naştere copil minor (original sau copie legalizată)"
         ]
       }
     ]
