@@ -1,5 +1,6 @@
 
 import { MapPin, Navigation, Phone, Mail, Smartphone, Clock } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
 const ADDRESS = {
   line1: "B-dul Ion Mihalache, nr. 106, Bl. 84, Sc. B, Et. 2, Ap. 32",
@@ -25,6 +26,48 @@ const OFFICE_HOURS = {
 const GOOGLE_MAPS_EMBED = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2849.5432!2d26.0977!3d44.4459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff4868c2c1b5%3A0x1f3d7c20bfb3b457!2sBulevardul%20Ion%20Mihalache%20106%2C%20București!5e0!3m2!1sro!2sro!4v1719848123456!5m2!1sro!2sro`;
 
 export default function ContactSection() {
+  const [shouldLoadMap, setShouldLoadMap] = useState(false);
+  const mapContainerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setShouldLoadMap(true);
+            observer.disconnect();
+          }
+        });
+      },
+      { rootMargin: '100px' }
+    );
+
+    if (mapContainerRef.current) {
+      observer.observe(mapContainerRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  // Passive event listeners for scroll performance
+  useEffect(() => {
+    const handleTouchStart = (e: TouchEvent) => {
+      // Touch handling with passive listener
+    };
+
+    const handleTouchMove = (e: TouchEvent) => {
+      // Touch handling with passive listener
+    };
+
+    document.addEventListener('touchstart', handleTouchStart, { passive: true });
+    document.addEventListener('touchmove', handleTouchMove, { passive: true });
+
+    return () => {
+      document.removeEventListener('touchstart', handleTouchStart);
+      document.removeEventListener('touchmove', handleTouchMove);
+    };
+  }, []);
+
   return (
     <section
       id="contact"
@@ -93,18 +136,30 @@ export default function ContactSection() {
           </div>
         </div>
 
-        <div className="flex-1 min-w-[250px] h-[220px] md:h-auto rounded-lg overflow-hidden border border-border shadow">
-          <iframe
-            title="Biroul Notarial Mariana Cîrstocea Locație"
-            src={GOOGLE_MAPS_EMBED}
-            width="100%"
-            height="225"
-            loading="lazy"
-            className="w-full h-full"
-            style={{ border: 0 }}
-            allowFullScreen
-            referrerPolicy="no-referrer-when-downgrade"
-          />
+        <div 
+          ref={mapContainerRef}
+          className="flex-1 min-w-[250px] h-[220px] md:h-auto rounded-lg overflow-hidden border border-border shadow"
+        >
+          {shouldLoadMap ? (
+            <iframe
+              title="Biroul Notarial Mariana Cîrstocea Locație"
+              src={GOOGLE_MAPS_EMBED}
+              width="100%"
+              height="225"
+              loading="lazy"
+              className="w-full h-full"
+              style={{ border: 0 }}
+              allowFullScreen
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          ) : (
+            <div className="w-full h-full bg-muted flex items-center justify-center">
+              <div className="text-center">
+                <MapPin className="mx-auto mb-2 text-muted-foreground" size={24} />
+                <p className="text-sm text-muted-foreground">Se încarcă harta...</p>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </section>

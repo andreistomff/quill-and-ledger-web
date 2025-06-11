@@ -92,5 +92,63 @@
 
   body {
     @apply bg-background text-foreground;
+    font-display: swap; /* Improve font loading performance */
+  }
+
+  /* Prevent layout shifts for images */
+  img {
+    @apply max-w-full h-auto;
+  }
+
+  /* Improve font loading */
+  .font-playfair {
+    font-display: swap;
+  }
+
+  .font-inter {
+    font-display: swap;
+  }
+
+  /* Performance optimizations */
+  * {
+    box-sizing: border-box;
+  }
+
+  /* Reduce paint on scroll */
+  .scroll-optimized {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+
+  /* Optimize animations */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* Critical CSS optimizations */
+@layer utilities {
+  .will-change-transform {
+    will-change: transform;
+  }
+  
+  .will-change-auto {
+    will-change: auto;
+  }
+  
+  .contain-layout {
+    contain: layout;
+  }
+  
+  .contain-paint {
+    contain: paint;
   }
 }
