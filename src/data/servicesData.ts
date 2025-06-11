@@ -31,7 +31,7 @@ export const serviceCategories: ServiceCategory[] = [
       },
       {
         name: "Contract de Donaţie Imobil",
-        description: "Prin contractul de donaţie, donatorul transmite donatarului, gratuit şi irevocabil, dreptul asupra unui bun.",
+        description: "Prin contractul de donaţie, donatorul transmite donatorului, gratuit şi irevocabil, dreptul asupra unui bun.",
         documents: [
           "Acte de identitate părţi",
           "Acte de proprietate imobil",
@@ -255,7 +255,7 @@ export const serviceCategories: ServiceCategory[] = [
       },
       {
         name: "Divorț prin Acordul Părților cu Copii Minori",
-        description: "Notarul public poate constata divorțul prin acordul soţilor şi elibera certificatul de divorţ, inclusiv dacă există copii minori născuţi din căsătorie, din afara ei sau adoptaţi.",
+        description: "Notarul public poate constata divorțul prin acordul soţilor şi elibera certificatul de divorț, inclusiv dacă există copii minori născuţi din căsătorie, din afara ei sau adoptaţi.",
         documents: [
           "Actele de identitate ale soților",
           "Certificate de naştere (original sau copie legalizată)",
@@ -304,18 +304,14 @@ export const serviceCategories: ServiceCategory[] = [
       },
       {
         name: "Declarații Notariale",
-        description: "Primirea și autentificarea declarațiilor unilaterale de voință în formă notarială.",
-        documents: [
-          "Act de identitate al declarantului",
-          "Documente justificative pentru conținutul declarației",
-          "Documentele de proprietate (dacă declarația se referă la bunuri)"
-        ]
+        description: "Uneori, pentru ca o declaraţie pe proprie răspundere să fie valabilă juridic, legea impune să fie încheiată în formă autentică, la notariat. De ex., declaraţia de renunţare la moștenire, conform Codului Civil, trebuie dată în faţa notarului public. De asemenea, diverse acte normative, legi speciale, regulamente interioare ale instituţiilor, ordine de ministru, hotărâri de guvern sau consiliu local pot impune necesitatea declaraţiei notariale. Pentru orice alte informații va rugam contactati-ne.",
+        documents: []
       }
     ],
     legalizationServices: [
       {
         name: "Legalizări",
-        description: "Vă puteţi adresa biroului nostru notarial pentru a solicita următoarele servicii de legalizări:",
+        description: "Vă puteți adresa biroului nostru notarial pentru a solicita următoarele servicii de legalizări:",
         legalizationTypes: {
           copii_inscrisuri: {
             label: "Legalizare copii de pe înscrisuri (acte)",
