@@ -287,15 +287,8 @@ export const serviceCategories: ServiceCategory[] = [
     services: [
       {
         name: "Consultanță Juridică",
-        description: "Notarul public acordă consultaţii juridice scrise sau verbale, la sediul cabinetului notarial, în următoarele domenii:
-- contracte imobiliare (vânzare, donație, partaj etc.)
-- divorț și partaj între soți
-- succesiuni și testamente (drept succesoral)
-- precum și orice alte acte notariale
-
-Notarul public titular al Biroului este Mariana Cîrstocea, care a absolvit Facultatea de Drept din cadrul Universității București în anul 1989 și are o experiență de peste 25 de ani în profesii juridice (avocat, magistrat). În desfășurarea activității ca magistrat a soluționat cauze în materie civilă și comercială, iar ultima instanță la care a activat a fost Înalta Curte de Casație și Justiție – Secția a II-a Civilă.
-",
-        ]
+        description: "Notarul public acordă consultaţii juridice scrise sau verbale, la sediul cabinetului notarial, în următoarele domenii: contracte imobiliare (vânzare, donație, partaj etc.), divorț și partaj între soți, succesiuni și testamente (drept succesoral), precum și orice alte acte notariale. Notarul public titular al Biroului este Mariana Cîrstocea, care a absolvit Facultatea de Drept din cadrul Universității București în anul 1989 și are o experiență de peste 25 de ani în profesii juridice (avocat, magistrat). În desfășurarea activității ca magistrat a soluționat cauze în materie civilă și comercială, iar ultima instanță la care a activat a fost Înalta Curte de Casație și Justiție – Secția a II-a Civilă.",
+        documents: []
       },
       {
         name: "Convenție Matrimonială",
@@ -357,4 +350,3 @@ Notarul public titular al Biroului este Mariana Cîrstocea, care a absolvit Facu
     ]
   }
 ];
-
