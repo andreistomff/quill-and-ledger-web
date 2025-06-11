@@ -85,21 +85,24 @@ const serviceCategories: ServiceCategory[] = [
         description: "Contractul de întreținere se încheie între părți pentru acordarea de servicii de întreținere și îngrijire în schimbul unor prestații convenite.",
         documents: [
           "Acte de identitate părţi",
-          "Documente medicale relevante (dacă este cazul)",
-          "Documente privind bunurile ce fac obiectul contractului",
-          "Certificat de stare civilă"
+          "Acte de proprietate asupra imobilului ce face obiectul contractului",
+          "Certificat fiscal pe numele proprietarului, eliberat de Administraţia Financiară competentă",
+          "Documentaţia cadastrală a bunului imobil, întocmită de un expert cadastral autorizat "
+          "Extras de carte funciară pentru autentificare "
+          "Pentru apartamente, adeverinţa eliberată de asociaţia de proprietari sau locatari care sa arate că proprietarul este la zi cu datoriile faţă de aceasta "
         ]
       },
       {
         name: "Act de Dezmembrare sau Dezlipire a unui Imobil",
         description: "Actul prin care se realizează dezmembrarea sau dezlipirea unui imobil în mai multe parcele distincte, conform reglementărilor urbanistice în vigoare.",
         documents: [
-          "Acte de identitate proprietar",
+          "Actele de identitate ale părţilor",
           "Acte de proprietate imobil",
-          "Documentaţia cadastrală",
-          "Extras de carte funciară pentru autentificare",
-          "Certificat de urbanism pentru dezmembrare",
-          "Aprobare de dezmembrare eliberată de autoritatea competentă"
+          "Certificat fiscal, în termen de valabilitate, emis pe numele proprietarului de către Administraţia Financiară",
+          "Doar dacă în urma dezmembrării rezultă mai mult de două loturi - certificat de urbanism în termen de valabilitate;",
+          "Documentaţia cadastrală a bunului imobil, întocmită de un expert cadastral autorizat",
+          "Extras de carte funciară pentru autentificare, se obţine prin notariat"
+          "Doar pentru persoanele juridice: certificat de înregistrare, act constitutiv, hotărâre AGA"
         ]
       },
       {
@@ -107,10 +110,11 @@ const serviceCategories: ServiceCategory[] = [
         description: "Prin contractul de închiriere, proprietarul (locatorul) concede locatarului dreptul de a folosi un imobil pe o perioadă determinată, în schimbul unei plăți (chiria).",
         documents: [
           "Acte de identitate părţi",
-          "Acte de proprietate imobil",
-          "Certificat fiscal al proprietarului",
-          "Pentru apartamente - adeverinţă de la asociaţia de proprietari",
-          "Ultima factură privind utilităţile"
+          "Certificat de căsătorie proprietari (dacă este cazul)",
+          "Actul de proprietate al bunului de închiriat",
+          "Dacă imobilul este intabulat, documentația cadastrală și încheierea de înscriere în cartea funciară;",
+          "Extras de carte funciară pentru informare, se obtine prin notariat"
+          "Certificat de performanță energetică"
         ]
       },
       {
@@ -118,10 +122,9 @@ const serviceCategories: ServiceCategory[] = [
         description: "Prin contractul de comodat auto, comodantul pune gratuit la dispoziția comodatarului un autovehicul pentru folosință pe o perioadă determinată.",
         documents: [
           "Acte de identitate părţi",
-          "Certificatul de înmatriculare al autovehiculului",
-          "Dovada proprietății asupra autovehiculului",
-          "Asigurarea RCA valabilă",
-          "Permisele de conducere ale părților (dacă este cazul)"
+          "Talon şi carte de identitate maşină",
+          "Certificat fiscal - se obține prin notariat",
+          "Pentru mașini cumpărate în leasing: acordul firmei de leasing",
         ]
       },
       {
@@ -130,9 +133,7 @@ const serviceCategories: ServiceCategory[] = [
         documents: [
           "Acte de identitate părţi",
           "Acte de proprietate imobil",
-          "Extras de carte funciară pentru informare",
-          "Pentru apartamente - adeverinţă de la asociaţia de proprietari",
-          "Certificat fiscal al proprietarului"
+          "Pentru persoanele juridice: acte de funcţionare Societate / PFA",
         ]
       },
       {
@@ -140,24 +141,18 @@ const serviceCategories: ServiceCategory[] = [
         description: "Contractul prin care părțile implicate într-un accident auto ajung la o înțelegere amiabilă privind despăgubirile și renunță la orice pretenții ulterioare.",
         documents: [
           "Acte de identitate părţi",
-          "Permisele de conducere",
-          "Certificatele de înmatriculare ale autovehiculelor",
-          "Asigurările RCA",
-          "Constatare amiabilă de accident (dacă există)",
-          "Facturi/devize de reparații",
-          "Fotografii ale daunelor"
+          "După caz, proces-verbal eliberat de agentul constatator, talonul mașinii/mașinilor implicate în accident.",
         ]
       },
       {
-        name: "Contract de Credit cu Ipotecă sau Gaj",
+        name: "Contract de Credit(imprumut) cu Ipotecă sau Gaj",
         description: "Contractul prin care creditorul acordă un împrumut debitorului, iar acesta garantează rambursarea prin constituirea unei ipoteci sau unui gaj asupra unui bun.",
         documents: [
           "Acte de identitate părţi",
-          "Documente de venit ale debitorului",
-          "Acte de proprietate asupra bunului ipotecat/gajat",
-          "Evaluarea bunului ipotecat/gajat",
-          "Extras de carte funciară pentru autentificare",
-          "Certificate fiscale"
+          "Acte de proprietate asupra bunului ce face obiectul tranzacţiei",
+          "Certificat fiscal pe numele proprietarului, eliberat de Administraţia Financiară competentă",
+          "Extras de carte funciară de autentificare - se obţine prin notariat",
+          "Documentaţia cadastrală a bunului imobil, întocmită de un expert cadastral autorizat"",
         ]
       },
       {
@@ -165,11 +160,11 @@ const serviceCategories: ServiceCategory[] = [
         description: "Prin contractul de rentă viageră, debitorul de rentă se obligă să plătească creditorului de rentă, pe durata vieții acestuia, o prestație periodică, în schimbul transmiterii unui bun sau a unei sume de bani.",
         documents: [
           "Acte de identitate părţi",
-          "Acte de proprietate asupra bunului transmis",
-          "Certificate medicale ale creditorului de rentă",
-          "Certificat fiscal",
-          "Extras de carte funciară pentru autentificare",
-          "Evaluarea bunului ce face obiectul contractului"
+          "Acte de proprietate asupra imobilului ce face obiectul contractului de rentă viageră",
+          "Certificat fiscal pe numele proprietarului, eliberat de Administraţia Financiară competentă",
+          "Documentaţia cadastrală a bunului imobil, întocmită de un expert cadastral autorizat",
+          "Extras de carte funciară de autentificare - se obţine prin notariat",
+          "In cazul apartamentelor, adeverinţa eliberată de asociaţia de proprietari sau locatari care sa arate că proprietarul este la zi cu datoriile faţă de aceasta"
         ]
       }
     ]
