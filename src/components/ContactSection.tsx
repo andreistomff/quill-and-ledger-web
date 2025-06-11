@@ -23,8 +23,8 @@ const OFFICE_HOURS = {
   note: "Recomandăm programări in avans"
 };
 
-// Google Maps embed URL using the exact embed code from the provided Google Maps link
-const GOOGLE_MAPS_EMBED = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.0906565851693!2d26.070670776225!3d44.46197097107869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1f93abf494885%3A0x9208dba7c0f83936!2sB-dul%20Ion%20Mihalache%20106%2C%20Bucure%C8%99ti%20011171%2C%20Romania!5e0!3m2!1sen!2s!4v1733936741095!5m2!1sen!2s`;
+// Updated Google Maps embed URL with precise address query
+const GOOGLE_MAPS_EMBED = `https://www.google.com/maps/embed/v1/place?key=&q=B-dul+Ion+Mihalache+106+Bl+84+Sector+1+București+Romania&zoom=17&maptype=roadmap`;
 
 export default function ContactSection() {
   const [shouldLoadMap, setShouldLoadMap] = useState(false);
