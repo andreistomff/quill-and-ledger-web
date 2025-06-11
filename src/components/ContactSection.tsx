@@ -23,8 +23,8 @@ const OFFICE_HOURS = {
   note: "Recomandăm programări in avans"
 };
 
-// Updated Google Maps embed URL with precise address query
-const GOOGLE_MAPS_EMBED = `https://www.google.com/maps/embed/v1/place?key=&q=B-dul+Ion+Mihalache+106+Bl+84+Sector+1+București+Romania&zoom=17&maptype=roadmap`;
+// Google Maps embed URL using the exact coordinates from the provided link
+const GOOGLE_MAPS_EMBED = `https://www.google.com/maps/embed/v1/place?key=AIzaSyDUpkrIzVtmeeMoQrMfCNIBcezD9HiFqZw&q=44.4621721,26.0730025&zoom=19&maptype=roadmap`;
 
 export default function ContactSection() {
   const [shouldLoadMap, setShouldLoadMap] = useState(false);
@@ -127,7 +127,7 @@ export default function ContactSection() {
           
           <div className="flex flex-col gap-4">
             <a
-              href={`https://maps.google.com/?q=${ADDRESS.googleMapsQuery}`}
+              href={`https://maps.google.com/?q=44.4621721,26.0730025`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center bg-primary text-primary-foreground text-base font-semibold py-3 px-6 rounded-lg shadow hover:bg-primary/90 transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
@@ -137,7 +137,7 @@ export default function ContactSection() {
               <span>Vizualizați pe Google Maps</span>
             </a>
             <a
-              href="https://www.waze.com/ul?ll=44.461971%2C26.073061&navigate=yes"
+              href="https://www.waze.com/ul?ll=44.4621721%2C26.0730025&navigate=yes"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center bg-primary text-primary-foreground text-base font-semibold py-3 px-6 rounded-lg shadow hover:bg-primary/90 transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
