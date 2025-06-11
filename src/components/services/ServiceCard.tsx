@@ -8,6 +8,12 @@ interface ServiceCardProps {
 const ServiceCard = ({ service }: ServiceCardProps) => {
   const isConsultancyService = service.name === "Consultanță Juridică";
   
+  // Split the consultancy service description into bullet points
+  const formatConsultancyDescription = (description: string) => {
+    const points = description.split('. ').filter(point => point.trim().length > 0);
+    return points.map(point => point.endsWith('.') ? point : point + '.');
+  };
+  
   return (
     <div className="border-l-4 border-primary/20 pl-4 bg-white rounded-lg p-6 shadow-sm border border-gray-100">
       <div className="mb-2">
@@ -15,9 +21,21 @@ const ServiceCard = ({ service }: ServiceCardProps) => {
           {service.name}
         </h4>
       </div>
-      <p className="text-gray-700 font-inter mb-3">
-        {service.description}
-      </p>
+      
+      {isConsultancyService ? (
+        <div className="text-gray-700 font-inter mb-3">
+          <ul className="list-disc list-inside space-y-2 text-[15px]">
+            {formatConsultancyDescription(service.description).map((point, idx) => (
+              <li key={idx}>{point}</li>
+            ))}
+          </ul>
+        </div>
+      ) : (
+        <p className="text-gray-700 font-inter mb-3">
+          {service.description}
+        </p>
+      )}
+      
       {!isConsultancyService && (
         <div className="mb-2">
           <span className="block text-gray-500 text-sm font-semibold mb-1 font-inter">
