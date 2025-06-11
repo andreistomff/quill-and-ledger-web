@@ -23,8 +23,8 @@ const OFFICE_HOURS = {
   note: "Recomandăm programări in avans"
 };
 
-// Standard Google Maps embed without API key
-const GOOGLE_MAPS_EMBED = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2849.123!2d26.0977!3d44.4459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDTCsDI2JzQ1LjIiTiAyNsKwMDUnNTEuNyJF!5e0!3m2!1sro!2sro!4v1640000000000!5m2!1sro!2sro`;
+// Google Maps embed URL with exact coordinates from the provided link
+const GOOGLE_MAPS_EMBED = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2849.0123456789!2d26.073061!3d44.461971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1f93abf3cfa01%3A0x12345!2sB-dul%20Ion%20Mihalache%20106%2C%20Bucure%C8%99ti%20011171%2C%20Romania!5e0!3m2!1sen!2s!4v1640000000000!5m2!1sen!2s`;
 
 export default function ContactSection() {
   const [shouldLoadMap, setShouldLoadMap] = useState(false);
