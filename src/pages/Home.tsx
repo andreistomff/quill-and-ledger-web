@@ -10,8 +10,7 @@ export default function Home() {
           Biroul Notarial Mariana Cîrstocea
         </h1>
         <p className="max-w-2xl mx-auto text-lg text-gray-600 mb-12 font-inter leading-relaxed">
-          Servicii notariale profesionale, de încredere și confidențiale pentru persoane fizice și juridice. 
-          Autentificăm documentele dumneavoastră importante cu precizie și discreție.
+          Biroul notarial Mariana Cîrstocea ofera serviciile care sunt prevazute de Legea notarilor publici si a activitatii notariale.
         </p>
         <div className="mb-16">
           <Link
