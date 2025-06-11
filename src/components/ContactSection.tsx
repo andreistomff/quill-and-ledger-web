@@ -22,7 +22,7 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-8 mt-16 mb-8"
+      className="max-w-3xl mx-auto bg-card rounded-lg shadow-lg p-8 mt-16 mb-8 border border-border"
     >
       <h2 className="font-playfair text-2xl font-bold text-primary mb-4 flex items-center gap-2">
         <MapPin className="text-primary" aria-hidden="true" />
@@ -31,24 +31,24 @@ export default function ContactSection() {
       <div className="flex flex-col md:flex-row gap-8">
         <div className="flex-1 flex flex-col justify-between">
           <div>
-            <p className="font-semibold text-gray-800 text-lg mb-1">Adresa Biroului Nostru:</p>
-            <address className="not-italic text-gray-600 mb-5 leading-relaxed">
+            <p className="font-semibold text-foreground text-lg mb-1">Adresa Biroului Nostru:</p>
+            <address className="not-italic text-muted-foreground mb-5 leading-relaxed">
               {ADDRESS.line1} <br />
               {ADDRESS.city}, {ADDRESS.state}
             </address>
 
             <div className="space-y-2 mb-5">
-              <div className="flex items-center text-gray-700">
+              <div className="flex items-center text-foreground">
                 <Phone className="mr-2 text-primary" size={20} />
-                <a href={`tel:${CONTACT_INFO.phone}`}>{CONTACT_INFO.phone}</a>
+                <a href={`tel:${CONTACT_INFO.phone}`} className="hover:text-primary transition-colors">{CONTACT_INFO.phone}</a>
               </div>
-              <div className="flex items-center text-gray-700">
+              <div className="flex items-center text-foreground">
                 <Mail className="mr-2 text-primary" size={20} />
-                <a href={`tel:${CONTACT_INFO.fax}`}>{CONTACT_INFO.fax}</a>
+                <a href={`tel:${CONTACT_INFO.fax}`} className="hover:text-primary transition-colors">{CONTACT_INFO.fax}</a>
               </div>
-              <div className="flex items-center text-gray-700">
+              <div className="flex items-center text-foreground">
                 <Smartphone className="mr-2 text-primary" size={20} />
-                <a href={`tel:${CONTACT_INFO.mobile}`}>{CONTACT_INFO.mobile}</a>
+                <a href={`tel:${CONTACT_INFO.mobile}`} className="hover:text-primary transition-colors">{CONTACT_INFO.mobile}</a>
               </div>
             </div>
 
@@ -56,7 +56,7 @@ export default function ContactSection() {
               href={`https://maps.google.com/?q=${ADDRESS.googleMapsQuery}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center text-primary hover:underline text-sm mb-6"
+              className="inline-flex items-center text-primary hover:text-primary/80 transition-colors text-sm mb-6"
             >
               <MapPin className="w-4 h-4 mr-1" />
               Vizualizați pe Google Maps
@@ -66,16 +66,13 @@ export default function ContactSection() {
             href="https://www.waze.com/ul?ll=44.461971%2C26.073061&navigate=yes"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center mt-4 bg-[#1A1F2C] text-white text-base font-semibold py-2 px-4 rounded-lg shadow hover:bg-[#222] transition-colors w-max"
-            style={{
-              background: "#1A1F2C",
-            }}
+            className="inline-flex items-center mt-4 bg-primary text-primary-foreground text-base font-semibold py-2 px-4 rounded-lg shadow hover:bg-primary/90 transition-colors w-max"
           >
             <Navigation className="mr-2" /> Rută rapidă cu Waze
           </a>
         </div>
 
-        <div className="flex-1 min-w-[250px] h-[220px] md:h-auto rounded-lg overflow-hidden border border-gray-200 shadow">
+        <div className="flex-1 min-w-[250px] h-[220px] md:h-auto rounded-lg overflow-hidden border border-border shadow">
           <iframe
             title="Biroul Notarial Mariana Cîrstocea Locație"
             src={GOOGLE_MAPS_EMBED}

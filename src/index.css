@@ -1,92 +1,87 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 42 15% 97%; /* Very light cream */
+    --foreground: 30 8% 20%; /* Dark warm brown */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 40 20% 95%; /* Light cream */
+    --card-foreground: 30 8% 20%; /* Dark warm brown */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 40 20% 95%; /* Light cream */
+    --popover-foreground: 30 8% 20%; /* Dark warm brown */
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 35 25% 35%; /* Warm dark brown */
+    --primary-foreground: 42 20% 96%; /* Very light cream */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 40 15% 88%; /* Light beige */
+    --secondary-foreground: 30 8% 25%; /* Darker brown */
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 38 18% 90%; /* Soft beige */
+    --muted-foreground: 30 6% 45%; /* Medium brown */
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 45 30% 85%; /* Warm beige accent */
+    --accent-foreground: 30 8% 25%; /* Darker brown */
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 65% 55%; /* Muted red */
+    --destructive-foreground: 42 20% 96%; /* Very light cream */
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 38 15% 85%; /* Light beige border */
+    --input: 38 15% 85%; /* Light beige border */
+    --ring: 35 25% 35%; /* Warm dark brown */
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 42 18% 94%; /* Cream sidebar */
+    --sidebar-foreground: 30 8% 25%; /* Dark brown text */
+    --sidebar-primary: 35 25% 35%; /* Warm dark brown */
+    --sidebar-primary-foreground: 42 20% 96%; /* Very light cream */
+    --sidebar-accent: 40 15% 88%; /* Light beige */
+    --sidebar-accent-foreground: 30 8% 25%; /* Darker brown */
+    --sidebar-border: 38 15% 82%; /* Beige border */
+    --sidebar-ring: 35 25% 35%; /* Warm dark brown */
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 30 8% 12%; /* Very dark brown */
+    --foreground: 42 20% 92%; /* Light cream */
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 30 8% 15%; /* Dark brown */
+    --card-foreground: 42 20% 92%; /* Light cream */
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 30 8% 15%; /* Dark brown */
+    --popover-foreground: 42 20% 92%; /* Light cream */
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 42 20% 88%; /* Light cream */
+    --primary-foreground: 30 8% 18%; /* Very dark brown */
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 30 6% 22%; /* Medium dark brown */
+    --secondary-foreground: 42 18% 85%; /* Cream */
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 30 6% 20%; /* Dark brown muted */
+    --muted-foreground: 40 12% 65%; /* Light brown */
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 30 6% 25%; /* Dark brown accent */
+    --accent-foreground: 42 18% 85%; /* Cream */
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 55% 45%; /* Dark muted red */
+    --destructive-foreground: 42 20% 92%; /* Light cream */
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 30 6% 25%; /* Dark brown border */
+    --input: 30 6% 25%; /* Dark brown border */
+    --ring: 42 18% 75%; /* Medium cream */
+
+    --sidebar-background: 30 8% 8%; /* Very dark brown sidebar */
+    --sidebar-foreground: 42 18% 85%; /* Cream text */
+    --sidebar-primary: 42 20% 75%; /* Medium cream */
+    --sidebar-primary-foreground: 30 8% 12%; /* Very dark brown */
+    --sidebar-accent: 30 6% 18%; /* Dark brown accent */
+    --sidebar-accent-foreground: 42 18% 85%; /* Cream */
+    --sidebar-border: 30 6% 20%; /* Dark brown border */
+    --sidebar-ring: 42 18% 75%; /* Medium cream */
   }
 }
 
