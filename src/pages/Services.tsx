@@ -1,4 +1,3 @@
-
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 type Service = {
@@ -63,9 +62,9 @@ const serviceCategories: ServiceCategory[] = [
           "Actele de proprietate ale imobilului de partajat",
           "Certificate fiscale pe numele fiecărui coproprietar - se obțin gratuit prin notariat",
           "Documentaţia cadastrală",
-          "Extras de carte funciară pentru autentificare - se obţine prin notariat"
-          "Pentru apartamente - adeverinţa eliberată de asociaţia de proprietari"
-          "La imobilele dobândite prin credit - acordul scris al băncii cu privire la încheierea partajului"
+          "Extras de carte funciară pentru autentificare - se obţine prin notariat",
+          "Pentru apartamente - adeverinţa eliberată de asociaţia de proprietari",
+          "La imobilele dobândite prin credit - acordul scris al băncii cu privire la încheierea partajului",
           "In cazul terenurilor - certificat de urbanism"
         ]
       },
@@ -82,12 +81,95 @@ const serviceCategories: ServiceCategory[] = [
         ]
       },
       {
-        name: "Toate Contractele",
-        description: "Servicii complete pentru întocmirea și autentificarea oricărui tip de contract conform legislației în vigoare.",
+        name: "Contract de Întreținere",
+        description: "Contractul de întreținere se încheie între părți pentru acordarea de servicii de întreținere și îngrijire în schimbul unor prestații convenite.",
         documents: [
           "Acte de identitate părţi",
-          "Documente specifice obiectului contractului",
-          "Documente suplimentare conform tipului de contract"
+          "Documente medicale relevante (dacă este cazul)",
+          "Documente privind bunurile ce fac obiectul contractului",
+          "Certificat de stare civilă"
+        ]
+      },
+      {
+        name: "Act de Dezmembrare sau Dezlipire a unui Imobil",
+        description: "Actul prin care se realizează dezmembrarea sau dezlipirea unui imobil în mai multe parcele distincte, conform reglementărilor urbanistice în vigoare.",
+        documents: [
+          "Acte de identitate proprietar",
+          "Acte de proprietate imobil",
+          "Documentaţia cadastrală",
+          "Extras de carte funciară pentru autentificare",
+          "Certificat de urbanism pentru dezmembrare",
+          "Aprobare de dezmembrare eliberată de autoritatea competentă"
+        ]
+      },
+      {
+        name: "Contract de Închiriere Imobil",
+        description: "Prin contractul de închiriere, proprietarul (locatorul) concede locatarului dreptul de a folosi un imobil pe o perioadă determinată, în schimbul unei plăți (chiria).",
+        documents: [
+          "Acte de identitate părţi",
+          "Acte de proprietate imobil",
+          "Certificat fiscal al proprietarului",
+          "Pentru apartamente - adeverinţă de la asociaţia de proprietari",
+          "Ultima factură privind utilităţile"
+        ]
+      },
+      {
+        name: "Contract de Comodat Auto",
+        description: "Prin contractul de comodat auto, comodantul pune gratuit la dispoziția comodatarului un autovehicul pentru folosință pe o perioadă determinată.",
+        documents: [
+          "Acte de identitate părţi",
+          "Certificatul de înmatriculare al autovehiculului",
+          "Dovada proprietății asupra autovehiculului",
+          "Asigurarea RCA valabilă",
+          "Permisele de conducere ale părților (dacă este cazul)"
+        ]
+      },
+      {
+        name: "Contract de Comodat Imobil de Tip Locuință sau Spațiu Comercial",
+        description: "Prin contractul de comodat imobiliar, comodantul pune gratuit la dispoziția comodatarului un imobil (locuință sau spațiu comercial) pentru folosință pe o perioadă determinată.",
+        documents: [
+          "Acte de identitate părţi",
+          "Acte de proprietate imobil",
+          "Extras de carte funciară pentru informare",
+          "Pentru apartamente - adeverinţă de la asociaţia de proprietari",
+          "Certificat fiscal al proprietarului"
+        ]
+      },
+      {
+        name: "Contract de Tranzacție în Urma unui Accident Auto",
+        description: "Contractul prin care părțile implicate într-un accident auto ajung la o înțelegere amiabilă privind despăgubirile și renunță la orice pretenții ulterioare.",
+        documents: [
+          "Acte de identitate părţi",
+          "Permisele de conducere",
+          "Certificatele de înmatriculare ale autovehiculelor",
+          "Asigurările RCA",
+          "Constatare amiabilă de accident (dacă există)",
+          "Facturi/devize de reparații",
+          "Fotografii ale daunelor"
+        ]
+      },
+      {
+        name: "Contract de Credit cu Ipotecă sau Gaj",
+        description: "Contractul prin care creditorul acordă un împrumut debitorului, iar acesta garantează rambursarea prin constituirea unei ipoteci sau unui gaj asupra unui bun.",
+        documents: [
+          "Acte de identitate părţi",
+          "Documente de venit ale debitorului",
+          "Acte de proprietate asupra bunului ipotecat/gajat",
+          "Evaluarea bunului ipotecat/gajat",
+          "Extras de carte funciară pentru autentificare",
+          "Certificate fiscale"
+        ]
+      },
+      {
+        name: "Contract de Rentă Viageră",
+        description: "Prin contractul de rentă viageră, debitorul de rentă se obligă să plătească creditorului de rentă, pe durata vieții acestuia, o prestație periodică, în schimbul transmiterii unui bun sau a unei sume de bani.",
+        documents: [
+          "Acte de identitate părţi",
+          "Acte de proprietate asupra bunului transmis",
+          "Certificate medicale ale creditorului de rentă",
+          "Certificat fiscal",
+          "Extras de carte funciară pentru autentificare",
+          "Evaluarea bunului ce face obiectul contractului"
         ]
       }
     ]
