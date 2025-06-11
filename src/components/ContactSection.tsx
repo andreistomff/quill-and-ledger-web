@@ -1,4 +1,3 @@
-
 import { MapPin, Navigation, Phone, Mail, Smartphone, Clock } from "lucide-react";
 
 const ADDRESS = {
@@ -14,6 +13,7 @@ const CONTACT_INFO = {
   phone: "031 422 8848",
   fax: "031 422 8848",
   mobile: "0774 646 195",
+  email: "notariat.mcirstocea@yahoo.com",
 };
 
 const OFFICE_HOURS = {
@@ -54,6 +54,10 @@ export default function ContactSection() {
               <div className="flex items-center text-foreground">
                 <Smartphone className="mr-2 text-primary" size={20} />
                 <a href={`tel:${CONTACT_INFO.mobile}`} className="hover:text-primary transition-colors">{CONTACT_INFO.mobile}</a>
+              </div>
+              <div className="flex items-center text-foreground">
+                <Mail className="mr-2 text-primary" size={20} />
+                <a href={`mailto:${CONTACT_INFO.email}`} className="hover:text-primary transition-colors">{CONTACT_INFO.email}</a>
               </div>
             </div>
 
