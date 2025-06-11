@@ -5,6 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
+import { useState } from "react";
 import useScrollToTop from "./hooks/useScrollToTop";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -12,8 +13,6 @@ import BackToTop from "./components/BackToTop";
 import Home from "./pages/Home";
 import Services from "./pages/Services";
 import NotFound from "./pages/NotFound";
-
-const queryClient = new QueryClient();
 
 const AppContent = () => {
   useScrollToTop();
@@ -35,18 +34,22 @@ const AppContent = () => {
   );
 };
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
+const App = () => {
+  const [queryClient] = useState(() => new QueryClient());
+
+  return (
     <HelmetProvider>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <AppContent />
-        </BrowserRouter>
-      </TooltipProvider>
+      <QueryClientProvider client={queryClient}>
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
+            <AppContent />
+          </BrowserRouter>
+        </TooltipProvider>
+      </QueryClientProvider>
     </HelmetProvider>
-  </QueryClientProvider>
-);
+  );
+};
 
 export default App;
