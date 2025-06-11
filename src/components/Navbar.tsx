@@ -1,6 +1,6 @@
 
 import { Link, useLocation } from "react-router-dom";
-import { Home, List, Scale } from "lucide-react";
+import { Home, List } from "lucide-react";
 
 const navItems = [
   { to: "/", label: "Acasă", icon: Home },
@@ -15,11 +15,11 @@ export default function Navbar() {
         to="/" 
         className="flex items-center gap-1 md:gap-2 font-playfair text-lg md:text-xl lg:text-2xl font-bold tracking-tight text-primary hover:text-primary/90 transition-colors"
       >
-        <Scale
-          size={24}
-          strokeWidth={2.3}
-          className="text-primary md:size-8 mb-0.5 hidden sm:block"
-          aria-label="Birou Notarial"
+        <img
+          src="/lovable-uploads/648a872e-5e5b-4e3c-b4e1-57dc0488b230.png"
+          alt="Biroul Notarial Mariana Cîrstocea Logo"
+          className="w-6 h-6 md:w-8 md:h-8 object-contain filter brightness-0 saturate-100 hidden sm:block"
+          style={{ filter: 'invert(19%) sepia(88%) saturate(2176%) hue-rotate(215deg) brightness(93%) contrast(91%)' }}
         />
         <span className="hidden sm:inline">Biroul Notarial Mariana Cîrstocea</span>
         <span className="sm:hidden text-sm leading-tight">Biroul Notarial Mariana Cîrstocea</span>
