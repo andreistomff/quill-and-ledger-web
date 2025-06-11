@@ -5,7 +5,6 @@ type Service = {
   name: string;
   description: string;
   documents: string[];
-  price: string;
 };
 
 type ServiceCategory = {
@@ -31,8 +30,7 @@ const serviceCategories: ServiceCategory[] = [
           "Certificat de performanță energetică, eliberat de un auditor energetic atestat",
           "Pentru apartamente - adeverinţă de la asociaţia de proprietari",
           "Ultima factură și chitanță privind plata la zi a utilităţilor imobilului"
-        ],
-        price: "300 RON"
+        ]
       },
       {
         name: "Antecontract Vânzare-Cumpărare (Precontract)",
@@ -42,8 +40,7 @@ const serviceCategories: ServiceCategory[] = [
           "Acte de proprietate imobil",
           "Documentaţia cadastrală",
           "Extras de carte funciară pentru informare - se obţine prin notariat"
-        ],
-        price: "200 RON"
+        ]
       },
       {
         name: "Contract de Donaţie Imobil",
@@ -56,8 +53,7 @@ const serviceCategories: ServiceCategory[] = [
           "Extras de carte funciară pentru autentificare - se obţine prin notariat",
           "Pentru apartamente - adeverinţă de la asociaţia de proprietari",
           "Ultima factură și chitanță privind plata la zi a utilităţilor imobilului"
-        ],
-        price: "250 RON"
+        ]
       }
     ]
   },
@@ -73,8 +69,7 @@ const serviceCategories: ServiceCategory[] = [
           "Act de identitate al moștenitorilor",
           "Documentele de proprietate ale defunctului",
           "Certificatul de căsătorie (dacă este cazul)"
-        ],
-        price: "150 RON"
+        ]
       },
       {
         name: "Declarație de Moștenitor",
@@ -83,8 +78,7 @@ const serviceCategories: ServiceCategory[] = [
           "Certificatul de deces",
           "Actele de identitate",
           "Documentele care dovedesc relația de rudenie"
-        ],
-        price: "100 RON"
+        ]
       }
     ]
   },
@@ -100,8 +94,7 @@ const serviceCategories: ServiceCategory[] = [
           "Certificatul de căsătorie",
           "Acordul de divorț semnat",
           "Dovada lipsei copiilor minori"
-        ],
-        price: "180 RON"
+        ]
       }
     ]
   },
@@ -116,8 +109,7 @@ const serviceCategories: ServiceCategory[] = [
           "Act de identitate emis de autorități",
           "Documente nesemnate ce necesită legalizare",
           "Documente suplimentare relevante"
-        ],
-        price: "50 RON"
+        ]
       }
     ]
   },
@@ -132,8 +124,7 @@ const serviceCategories: ServiceCategory[] = [
           "Act de identitate al administratorului/reprezentantului",
           "Documente nesemnate ale societății",
           "Acte privind înființarea societății"
-        ],
-        price: "75 RON"
+        ]
       }
     ]
   }
@@ -141,13 +132,10 @@ const serviceCategories: ServiceCategory[] = [
 
 const ServiceCard = ({ service }: { service: Service }) => (
   <div className="border-l-4 border-primary/20 pl-4 bg-white rounded-lg p-6 shadow-sm border border-gray-100">
-    <div className="flex justify-between items-start mb-2">
+    <div className="mb-2">
       <h4 className="font-playfair text-lg font-semibold text-primary">
         {service.name}
       </h4>
-      <span className="text-primary font-semibold text-lg">
-        {service.price}
-      </span>
     </div>
     <p className="text-gray-700 font-inter mb-3">
       {service.description}
