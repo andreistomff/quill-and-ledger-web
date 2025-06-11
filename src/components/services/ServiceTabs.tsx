@@ -36,11 +36,11 @@ const ServiceTabs = ({ categories }: ServiceTabsProps) => {
           </SelectContent>
         </Select>
 
-        <div className="space-y-6">
+        <div className="space-y-8">
           {categories
             .filter(category => category.id === selectedCategory)
             .map((category) => (
-              <div key={category.id}>
+              <div key={category.id} className="space-y-8">
                 {category.services?.map((service, index) => (
                   <ServiceCard key={`service-${category.id}-${index}`} service={service} />
                 ))}
