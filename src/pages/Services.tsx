@@ -1,5 +1,3 @@
-
-
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 type Service = {
@@ -138,9 +136,6 @@ const ServiceCard = ({ service }: { service: Service }) => (
         ))}
       </ul>
     </div>
-    <div className="font-semibold text-primary font-inter text-lg mt-4">
-      Preț: {service.price}
-    </div>
   </div>
 );
 
@@ -175,4 +170,3 @@ export default function Services() {
     </div>
   );
 }
-
