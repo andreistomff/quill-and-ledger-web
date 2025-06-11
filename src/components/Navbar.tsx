@@ -18,8 +18,10 @@ export default function Navbar() {
         <img
           src="/lovable-uploads/648a872e-5e5b-4e3c-b4e1-57dc0488b230.png"
           alt="Biroul Notarial Mariana Cîrstocea Logo"
-          className="w-6 h-6 md:w-8 md:h-8 object-contain filter brightness-0 saturate-100 hidden sm:block"
-          style={{ filter: 'invert(19%) sepia(88%) saturate(2176%) hue-rotate(215deg) brightness(93%) contrast(91%)' }}
+          className="w-6 h-6 md:w-8 md:h-8 object-contain hidden sm:block brightness-0 saturate-100"
+          style={{ 
+            filter: 'brightness(0) saturate(100%) invert(31%) sepia(12%) saturate(629%) hue-rotate(338deg) brightness(95%) contrast(91%)' 
+          }}
         />
         <span className="hidden sm:inline">Biroul Notarial Mariana Cîrstocea</span>
         <span className="sm:hidden text-sm leading-tight">Biroul Notarial Mariana Cîrstocea</span>
