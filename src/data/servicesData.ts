@@ -292,7 +292,7 @@ export const serviceCategories: ServiceCategory[] = [
       },
       {
         name: "Convenție Matrimonială",
-        description: "Întocmirea convenției matrimoniale pentru stabilirea regimului bunurilor între soți.",
+        description: "Soţii pot alege prin convenţie matrimonială între regimul separaţiei de bunuri sau cel al comunităţii convenţionale. Când soţii nu încheie o convenţie matrimonială, li se va aplica de drept regimul comunităţii legale. Pentru mai multe va rugam contactati-ne.",
         documents: [
           "Actele de identitate ale viitorilor soți",
           "Documentele privind bunurile ce fac obiectul convenției",
