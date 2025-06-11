@@ -33,7 +33,7 @@ export default function BackToTop() {
   return (
     <button
       onClick={scrollToTop}
-      className="fixed bottom-6 right-6 bg-primary text-primary-foreground p-4 rounded-full shadow-lg hover:bg-primary/90 transition-all duration-300 hover:scale-110 z-50 min-touch-target focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+      className="fixed bottom-6 right-6 bg-primary text-primary-foreground p-4 rounded-full shadow-lg hover:bg-primary/90 transition-all duration-300 hover:scale-110 z-50 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
       aria-label="Înapoi la începutul paginii"
       title="Înapoi la începutul paginii"
     >

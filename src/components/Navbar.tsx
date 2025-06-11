@@ -14,7 +14,7 @@ export default function Navbar() {
     <nav className="flex items-center justify-between py-3 px-4 md:py-4 md:px-6 border-b border-border bg-background sticky top-0 z-50 will-change-transform">
       <Link 
         to="/" 
-        className="flex items-center gap-1 md:gap-2 font-playfair text-lg md:text-xl lg:text-2xl font-bold tracking-tight text-primary hover:text-primary/90 transition-colors will-change-transform min-touch-target p-2"
+        className="flex items-center gap-1 md:gap-2 font-playfair text-lg md:text-xl lg:text-2xl font-bold tracking-tight text-primary hover:text-primary/90 transition-colors will-change-transform p-2"
         aria-label="Biroul Notarial Mariana Cîrstocea - Pagina principală"
       >
         <img
@@ -32,7 +32,7 @@ export default function Navbar() {
         <span className="hidden sm:inline">Biroul Notarial Mariana Cîrstocea</span>
         <span className="sm:hidden text-sm leading-tight">Biroul Notarial Mariana Cîrstocea</span>
       </Link>
-      <ul className="flex gap-2 md:gap-4 interactive-spacing">
+      <ul className="flex gap-2 md:gap-4">
         {navItems.map((item) => {
           const active =
             location.pathname === item.to ||
@@ -41,7 +41,7 @@ export default function Navbar() {
             <li key={item.to}>
               <Link
                 to={item.to}
-                className={`flex items-center gap-1 md:gap-2 px-3 py-2 md:px-4 md:py-3 rounded transition-colors duration-200 text-sm md:text-base will-change-transform min-touch-target
+                className={`flex items-center gap-1 md:gap-2 px-3 py-2 md:px-4 md:py-3 rounded transition-colors duration-200 text-sm md:text-base will-change-transform
                   ${active ? "bg-accent text-accent-foreground font-semibold" : "text-foreground hover:bg-accent hover:text-accent-foreground"}
                   font-inter`}
                 aria-current={active ? "page" : undefined}

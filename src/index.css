@@ -5,83 +5,83 @@
 
 @layer base {
   :root {
-    --background: 42 15% 98%; /* Lighter cream for better contrast */
-    --foreground: 25 10% 15%; /* Darker brown for better contrast */
+    --background: 42 25% 96%;
+    --foreground: 25 15% 25%;
 
-    --card: 40 20% 96%; /* Lighter cream */
-    --card-foreground: 25 10% 15%; /* Darker brown for better contrast */
+    --card: 40 25% 94%;
+    --card-foreground: 25 15% 25%;
 
-    --popover: 40 20% 96%; /* Lighter cream */
-    --popover-foreground: 25 10% 15%; /* Darker brown for better contrast */
+    --popover: 40 25% 94%;
+    --popover-foreground: 25 15% 25%;
 
-    --primary: 30 30% 25%; /* Darker brown for better contrast */
-    --primary-foreground: 42 25% 98%; /* Much lighter cream for contrast */
+    --primary: 30 25% 35%;
+    --primary-foreground: 42 25% 95%;
 
-    --secondary: 40 15% 85%; /* Adjusted beige */
-    --secondary-foreground: 25 10% 15%; /* Darker brown for better contrast */
+    --secondary: 40 20% 80%;
+    --secondary-foreground: 25 15% 25%;
 
-    --muted: 38 18% 88%; /* Lighter beige */
-    --muted-foreground: 25 8% 35%; /* Darker brown for better contrast */
+    --muted: 38 20% 85%;
+    --muted-foreground: 25 12% 45%;
 
-    --accent: 45 30% 82%; /* Adjusted warm beige accent */
-    --accent-foreground: 25 10% 15%; /* Darker brown for better contrast */
+    --accent: 45 35% 78%;
+    --accent-foreground: 25 15% 25%;
 
-    --destructive: 0 70% 45%; /* Darker red for better contrast */
-    --destructive-foreground: 42 25% 98%; /* Much lighter cream for contrast */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 38 15% 80%; /* Darker border for better visibility */
-    --input: 38 15% 80%; /* Darker border for better visibility */
-    --ring: 30 30% 25%; /* Darker brown */
+    --border: 38 20% 75%;
+    --input: 38 20% 75%;
+    --ring: 30 25% 35%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 42 18% 95%; /* Lighter cream sidebar */
-    --sidebar-foreground: 25 10% 15%; /* Darker brown text */
-    --sidebar-primary: 30 30% 25%; /* Darker brown */
-    --sidebar-primary-foreground: 42 25% 98%; /* Much lighter cream */
-    --sidebar-accent: 40 15% 85%; /* Adjusted beige */
-    --sidebar-accent-foreground: 25 10% 15%; /* Darker brown */
-    --sidebar-border: 38 15% 75%; /* Darker border */
-    --sidebar-ring: 30 30% 25%; /* Darker brown */
+    --sidebar-background: 42 25% 94%;
+    --sidebar-foreground: 25 15% 25%;
+    --sidebar-primary: 30 25% 35%;
+    --sidebar-primary-foreground: 42 25% 95%;
+    --sidebar-accent: 40 20% 80%;
+    --sidebar-accent-foreground: 25 15% 25%;
+    --sidebar-border: 38 20% 70%;
+    --sidebar-ring: 30 25% 35%;
   }
 
   .dark {
-    --background: 25 10% 8%; /* Darker background */
-    --foreground: 42 25% 95%; /* Lighter cream */
+    --background: 25 15% 12%;
+    --foreground: 42 25% 88%;
 
-    --card: 25 10% 10%; /* Darker brown */
-    --card-foreground: 42 25% 95%; /* Lighter cream */
+    --card: 25 15% 15%;
+    --card-foreground: 42 25% 88%;
 
-    --popover: 25 10% 10%; /* Darker brown */
-    --popover-foreground: 42 25% 95%; /* Lighter cream */
+    --popover: 25 15% 15%;
+    --popover-foreground: 42 25% 88%;
 
-    --primary: 42 25% 90%; /* Much lighter cream */
-    --primary-foreground: 25 10% 8%; /* Much darker brown */
+    --primary: 42 25% 85%;
+    --primary-foreground: 25 15% 12%;
 
-    --secondary: 25 8% 18%; /* Darker brown */
-    --secondary-foreground: 42 20% 88%; /* Lighter cream */
+    --secondary: 25 12% 22%;
+    --secondary-foreground: 42 20% 85%;
 
-    --muted: 25 8% 15%; /* Darker brown muted */
-    --muted-foreground: 40 15% 70%; /* Lighter brown for better contrast */
+    --muted: 25 12% 18%;
+    --muted-foreground: 40 18% 65%;
 
-    --accent: 25 8% 20%; /* Darker brown accent */
-    --accent-foreground: 42 20% 88%; /* Lighter cream */
+    --accent: 25 12% 25%;
+    --accent-foreground: 42 20% 85%;
 
-    --destructive: 0 60% 55%; /* Brighter red for dark mode */
-    --destructive-foreground: 42 25% 95%; /* Lighter cream */
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 25 8% 20%; /* Lighter border for dark mode */
-    --input: 25 8% 20%; /* Lighter border for dark mode */
-    --ring: 42 20% 80%; /* Lighter cream */
+    --border: 25 12% 25%;
+    --input: 25 12% 25%;
+    --ring: 42 20% 75%;
 
-    --sidebar-background: 25 10% 5%; /* Much darker brown sidebar */
-    --sidebar-foreground: 42 20% 88%; /* Lighter cream text */
-    --sidebar-primary: 42 25% 80%; /* Lighter cream */
-    --sidebar-primary-foreground: 25 10% 8%; /* Much darker brown */
-    --sidebar-accent: 25 8% 15%; /* Darker brown accent */
-    --sidebar-accent-foreground: 42 20% 88%; /* Lighter cream */
-    --sidebar-border: 25 8% 18%; /* Lighter border for dark mode */
-    --sidebar-ring: 42 20% 80%; /* Lighter cream */
+    --sidebar-background: 25 15% 8%;
+    --sidebar-foreground: 42 20% 85%;
+    --sidebar-primary: 42 25% 75%;
+    --sidebar-primary-foreground: 25 15% 12%;
+    --sidebar-accent: 25 12% 18%;
+    --sidebar-accent-foreground: 42 20% 85%;
+    --sidebar-border: 25 12% 22%;
+    --sidebar-ring: 42 20% 75%;
   }
 }
 
@@ -133,18 +133,6 @@
     }
   }
 
-  /* Accessibility improvements for touch targets */
-  button, a, [role="button"] {
-    min-height: 44px;
-    min-width: 44px;
-    touch-action: manipulation;
-  }
-
-  /* Ensure sufficient spacing between interactive elements */
-  .interactive-spacing > * + * {
-    margin-left: 8px;
-  }
-
   /* Focus indicators for better accessibility */
   button:focus-visible,
   a:focus-visible,
@@ -183,10 +171,5 @@
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border: 0;
-  }
-
-  .min-touch-target {
-    min-height: 44px;
-    min-width: 44px;
   }
 }

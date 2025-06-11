@@ -48,7 +48,7 @@ export default function Home() {
           <div className="mb-16">
             <Link
               to="/services"
-              className="inline-flex items-center justify-center bg-primary text-primary-foreground font-semibold px-8 py-4 rounded shadow transition hover:bg-primary/90 font-inter text-lg min-touch-target focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+              className="inline-flex items-center justify-center bg-primary text-primary-foreground font-semibold px-8 py-4 rounded shadow transition hover:bg-primary/90 font-inter text-lg focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
               aria-label="Navigare la pagina cu toate serviciile notariale oferite de biroul nostru"
             >
               Vizualizează Serviciile

@@ -95,7 +95,7 @@ export default function ContactSection() {
                 <Phone className="mr-3 text-primary flex-shrink-0" size={20} aria-hidden="true" />
                 <a 
                   href={`tel:${CONTACT_INFO.phone.replace(/\s/g, '')}`} 
-                  className="hover:text-primary transition-colors min-touch-target py-1"
+                  className="hover:text-primary transition-colors py-1"
                   aria-label={`Telefon birou: ${CONTACT_INFO.phone}`}
                 >
                   {CONTACT_INFO.phone}
@@ -105,7 +105,7 @@ export default function ContactSection() {
                 <Phone className="mr-3 text-primary flex-shrink-0" size={20} aria-hidden="true" />
                 <a 
                   href={`tel:${CONTACT_INFO.fax.replace(/\s/g, '')}`} 
-                  className="hover:text-primary transition-colors min-touch-target py-1"
+                  className="hover:text-primary transition-colors py-1"
                   aria-label={`Fax: ${CONTACT_INFO.fax}`}
                 >
                   {CONTACT_INFO.fax} (Fax)
@@ -115,7 +115,7 @@ export default function ContactSection() {
                 <Smartphone className="mr-3 text-primary flex-shrink-0" size={20} aria-hidden="true" />
                 <a 
                   href={`tel:${CONTACT_INFO.mobile.replace(/\s/g, '')}`} 
-                  className="hover:text-primary transition-colors min-touch-target py-1"
+                  className="hover:text-primary transition-colors py-1"
                   aria-label={`Telefon mobil: ${CONTACT_INFO.mobile}`}
                 >
                   {CONTACT_INFO.mobile}
@@ -125,7 +125,7 @@ export default function ContactSection() {
                 <Mail className="mr-3 text-primary flex-shrink-0" size={20} aria-hidden="true" />
                 <a 
                   href={`mailto:${CONTACT_INFO.email}`} 
-                  className="hover:text-primary transition-colors min-touch-target py-1 break-all"
+                  className="hover:text-primary transition-colors py-1 break-all"
                   aria-label={`Email: ${CONTACT_INFO.email}`}
                 >
                   {CONTACT_INFO.email}
@@ -148,7 +148,7 @@ export default function ContactSection() {
               href={`https://maps.google.com/?q=${ADDRESS.googleMapsQuery}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-primary text-primary-foreground text-base font-semibold py-3 px-6 rounded-lg shadow hover:bg-primary/90 transition-colors min-touch-target focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+              className="inline-flex items-center justify-center bg-primary text-primary-foreground text-base font-semibold py-3 px-6 rounded-lg shadow hover:bg-primary/90 transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
               aria-label="Deschide locația biroului notarial pe Google Maps (se deschide în fereastră nouă)"
             >
               <MapPin className="mr-2 flex-shrink-0" size={20} aria-hidden="true" />
@@ -158,7 +158,7 @@ export default function ContactSection() {
               href="https://www.waze.com/ul?ll=44.461971%2C26.073061&navigate=yes"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-primary text-primary-foreground text-base font-semibold py-3 px-6 rounded-lg shadow hover:bg-primary/90 transition-colors min-touch-target focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+              className="inline-flex items-center justify-center bg-primary text-primary-foreground text-base font-semibold py-3 px-6 rounded-lg shadow hover:bg-primary/90 transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
               aria-label="Deschide navigația către birou în aplicația Waze (se deschide în fereastră nouă)"
             >
               <Navigation className="mr-2 flex-shrink-0" size={20} aria-hidden="true" />
