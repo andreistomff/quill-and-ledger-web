@@ -1,3 +1,4 @@
+
 import { MapPin, Navigation, Phone, Mail, Smartphone, Clock } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
@@ -128,10 +129,15 @@ export default function ContactSection() {
           aria-label="Hartă cu locația exactă a Biroului Notarial Mariana Cîrstocea pe B-dul Ion Mihalache 106"
         >
           <img
-            src="https://maps.googleapis.com/maps/api/staticmap?center=44.4621721,26.0730025&zoom=16&size=600x400&maptype=roadmap&markers=color:red%7Clabel:N%7C44.4621721,26.0730025&key=AIzaSyDUpkrIzVtmeeMoQrMfCNIBcezD9HiFqZw"
+            src="https://tile.openstreetmap.org/17/86762/44654.png"
             alt="Hartă cu locația exactă a biroului notarial pe B-dul Ion Mihalache 106, București, Sector 1"
             className="w-full h-full object-cover"
             loading="lazy"
+            onError={(e) => {
+              console.log('Map image failed to load, using fallback');
+              const img = e.target as HTMLImageElement;
+              img.src = "https://images.unsplash.com/photo-1524661135-423995f22d0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80";
+            }}
           />
           <div className="absolute inset-0 bg-primary/5 flex items-end justify-center pb-4">
             <div className="text-center bg-card/95 p-3 rounded-lg shadow-lg backdrop-blur-sm">
