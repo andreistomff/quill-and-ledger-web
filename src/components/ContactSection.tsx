@@ -1,5 +1,5 @@
-
 import { MapPin, Navigation, Phone, Mail, Smartphone, Clock } from "lucide-react";
+import { useState } from "react";
 
 const ADDRESS = {
   line1: "B-dul Ion Mihalache, nr. 106, Bl. 84, Sc. B, Et. 2, Ap. 32",
@@ -23,6 +23,8 @@ const OFFICE_HOURS = {
 };
 
 export default function ContactSection() {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   return (
     <section
       id="contact"
@@ -127,11 +129,18 @@ export default function ContactSection() {
           role="img"
           aria-label="Hartă cu locația exactă a Biroului Notarial Mariana Cîrstocea pe B-dul Ion Mihalache 106"
         >
+          {!imageLoaded && (
+            <div className="absolute inset-0 bg-muted animate-pulse flex items-center justify-center">
+              <MapPin className="text-primary" size={32} />
+            </div>
+          )}
           <img
             src="/lovable-uploads/8f8cac27-aa5b-47fa-beae-433a11078e3d.png"
             alt="Vedere aeriană cu locația exactă a biroului notarial pe B-dul Ion Mihalache 106, București, Sector 1"
-            className="w-full h-full object-cover"
+            className={`w-full h-full object-cover transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
             loading="lazy"
+            decoding="async"
+            onLoad={() => setImageLoaded(true)}
           />
           <div className="absolute inset-0 bg-primary/5 flex items-end justify-center pb-4">
             <div className="text-center bg-card/95 p-3 rounded-lg shadow-lg backdrop-blur-sm">

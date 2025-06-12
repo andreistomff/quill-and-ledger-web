@@ -88,19 +88,23 @@
 @layer base {
   * {
     @apply border-border;
+    box-sizing: border-box;
   }
 
   body {
     @apply bg-background text-foreground;
-    font-display: swap; /* Improve font loading performance */
+    font-display: swap;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
-  /* Prevent layout shifts for images */
+  /* Optimize images */
   img {
     @apply max-w-full h-auto;
+    content-visibility: auto;
   }
 
-  /* Improve font loading */
+  /* Optimize fonts */
   .font-playfair {
     font-display: swap;
   }
@@ -110,18 +114,14 @@
   }
 
   /* Performance optimizations */
-  * {
-    box-sizing: border-box;
-  }
-
-  /* Reduce paint on scroll */
+  /* Create new stacking context for fixed/sticky elements */
   .scroll-optimized {
     transform: translateZ(0);
     backface-visibility: hidden;
     perspective: 1000px;
   }
 
-  /* Optimize animations */
+  /* Reduce motion for users who prefer it */
   @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
@@ -133,7 +133,7 @@
     }
   }
 
-  /* Focus indicators for better accessibility */
+  /* Enhanced focus indicators */
   button:focus-visible,
   a:focus-visible,
   [role="button"]:focus-visible {
@@ -142,7 +142,7 @@
   }
 }
 
-/* Critical CSS optimizations */
+/* Performance utilities */
 @layer utilities {
   .will-change-transform {
     will-change: transform;
@@ -160,6 +160,10 @@
     contain: paint;
   }
 
+  .contain-style {
+    contain: style;
+  }
+
   /* Accessibility utilities */
   .sr-only {
     position: absolute;
@@ -171,5 +175,10 @@
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border: 0;
+  }
+
+  /* Content visibility for performance */
+  .auto-visibility {
+    content-visibility: auto;
   }
 }
