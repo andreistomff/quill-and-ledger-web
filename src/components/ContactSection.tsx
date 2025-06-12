@@ -23,8 +23,8 @@ const OFFICE_HOURS = {
   note: "Recomandăm programări in avans"
 };
 
-// Google Maps embed URL using the exact coordinates from the provided link
-const GOOGLE_MAPS_EMBED = `https://www.google.com/maps/embed/v1/place?key=AIzaSyDUpkrIzVtmeeMoQrMfCNIBcezD9HiFqZw&q=44.4621721,26.0730025&zoom=19&maptype=roadmap`;
+// Try using the search format instead of just coordinates
+const GOOGLE_MAPS_EMBED = `https://www.google.com/maps/embed/v1/search?key=AIzaSyDUpkrIzVtmeeMoQrMfCNIBcezD9HiFqZw&q=44.4621721,26.0730025+B-dul+Ion+Mihalache+106+București&zoom=18&maptype=roadmap`;
 
 export default function ContactSection() {
   const [shouldLoadMap, setShouldLoadMap] = useState(false);
@@ -48,6 +48,11 @@ export default function ContactSection() {
     }
 
     return () => observer.disconnect();
+  }, []);
+
+  // Add some debugging
+  useEffect(() => {
+    console.log('Google Maps Embed URL:', GOOGLE_MAPS_EMBED);
   }, []);
 
   return (
