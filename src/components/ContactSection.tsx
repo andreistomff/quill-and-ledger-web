@@ -1,4 +1,3 @@
-
 import { MapPin, Navigation, Phone, Mail, Smartphone, Clock } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
@@ -126,17 +125,17 @@ export default function ContactSection() {
         <div 
           className="flex-1 min-w-[250px] h-[240px] md:h-auto rounded-lg overflow-hidden border border-border shadow relative"
           role="img"
-          aria-label="Vedere statică a zonei unde se află Biroul Notarial Mariana Cîrstocea"
+          aria-label="Hartă cu locația exactă a Biroului Notarial Mariana Cîrstocea pe B-dul Ion Mihalache 106"
         >
           <img
-            src="https://images.unsplash.com/photo-1466442929976-97f336a657be?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80"
-            alt="Vedere statică a zonei Bucureștiului unde se află biroul notarial"
+            src="https://maps.googleapis.com/maps/api/staticmap?center=44.4621721,26.0730025&zoom=16&size=600x400&maptype=roadmap&markers=color:red%7Clabel:N%7C44.4621721,26.0730025&key=AIzaSyDUpkrIzVtmeeMoQrMfCNIBcezD9HiFqZw"
+            alt="Hartă cu locația exactă a biroului notarial pe B-dul Ion Mihalache 106, București, Sector 1"
             className="w-full h-full object-cover"
             loading="lazy"
           />
-          <div className="absolute inset-0 bg-primary/10 flex items-center justify-center">
-            <div className="text-center bg-card/90 p-4 rounded-lg shadow">
-              <MapPin className="mx-auto mb-2 text-primary" size={32} aria-hidden="true" />
+          <div className="absolute inset-0 bg-primary/5 flex items-end justify-center pb-4">
+            <div className="text-center bg-card/95 p-3 rounded-lg shadow-lg backdrop-blur-sm">
+              <MapPin className="mx-auto mb-1 text-primary" size={24} aria-hidden="true" />
               <p className="text-sm font-semibold text-card-foreground">Biroul Notarial</p>
               <p className="text-xs text-muted-foreground">B-dul Ion Mihalache 106</p>
             </div>
