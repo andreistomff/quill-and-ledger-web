@@ -98,10 +98,41 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
+  /* Prevent text cursor on non-editable elements */
+  h1, h2, h3, h4, h5, h6, p, span, div, section, article, aside, nav, header, footer {
+    cursor: default;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+
+  /* Allow text selection only on specific content areas */
+  .selectable-text {
+    user-select: text;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    cursor: text;
+  }
+
+  /* Ensure proper cursor for interactive elements */
+  button, a, [role="button"], [tabindex] {
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+
   /* Optimize images */
   img {
     @apply max-w-full h-auto;
     content-visibility: auto;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
   }
 
   /* Optimize fonts */
