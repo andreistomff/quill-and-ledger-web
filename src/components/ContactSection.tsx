@@ -1,3 +1,4 @@
+
 import { MapPin, Navigation, Phone, Mail, Smartphone, Clock } from "lucide-react";
 import { useState } from "react";
 
@@ -142,13 +143,6 @@ export default function ContactSection() {
             decoding="async"
             onLoad={() => setImageLoaded(true)}
           />
-          <div className="absolute inset-0 bg-primary/5 flex items-end justify-center pb-4">
-            <div className="text-center bg-card/95 p-3 rounded-lg shadow-lg backdrop-blur-sm">
-              <MapPin className="mx-auto mb-1 text-primary" size={24} aria-hidden="true" />
-              <p className="text-sm font-semibold text-card-foreground">Biroul Notarial</p>
-              <p className="text-xs text-muted-foreground">B-dul Ion Mihalache 106</p>
-            </div>
-          </div>
         </div>
       </div>
     </section>
