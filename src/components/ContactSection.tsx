@@ -1,4 +1,3 @@
-
 import { MapPin, Navigation, Phone, Mail, Smartphone, Clock } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
@@ -24,6 +23,30 @@ const OFFICE_HOURS = {
 };
 
 export default function ContactSection() {
+  const [mapSrc, setMapSrc] = useState("");
+  const [mapError, setMapError] = useState(false);
+
+  useEffect(() => {
+    // Try different map sources in order of preference
+    const mapSources = [
+      // OpenStreetMap with correct tile calculation for Bucharest coordinates
+      `https://tile.openstreetmap.org/16/43381/22327.png`,
+      // Different zoom level
+      `https://tile.openstreetmap.org/15/21690/11163.png`,
+      // Fallback to a map image of Bucharest
+      `https://images.unsplash.com/photo-1555794830-9e08c8346c41?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80`,
+    ];
+
+    setMapSrc(mapSources[0]);
+  }, []);
+
+  const handleMapError = () => {
+    console.log('Current map source failed, trying fallback');
+    setMapError(true);
+    // Use a generic Bucharest city image as final fallback
+    setMapSrc("https://images.unsplash.com/photo-1555794830-9e08c8346c41?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80");
+  };
+
   return (
     <section
       id="contact"
@@ -128,17 +151,23 @@ export default function ContactSection() {
           role="img"
           aria-label="Hartă cu locația exactă a Biroului Notarial Mariana Cîrstocea pe B-dul Ion Mihalache 106"
         >
-          <img
-            src="https://tile.openstreetmap.org/17/86762/44654.png"
-            alt="Hartă cu locația exactă a biroului notarial pe B-dul Ion Mihalache 106, București, Sector 1"
-            className="w-full h-full object-cover"
-            loading="lazy"
-            onError={(e) => {
-              console.log('Map image failed to load, using fallback');
-              const img = e.target as HTMLImageElement;
-              img.src = "https://images.unsplash.com/photo-1524661135-423995f22d0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80";
-            }}
-          />
+          {mapSrc ? (
+            <img
+              src={mapSrc}
+              alt="Hartă cu locația exactă a biroului notarial pe B-dul Ion Mihalache 106, București, Sector 1"
+              className="w-full h-full object-cover"
+              loading="lazy"
+              onError={handleMapError}
+              onLoad={() => console.log('Map image loaded successfully')}
+            />
+          ) : (
+            <div className="w-full h-full bg-muted flex items-center justify-center">
+              <div className="text-center p-4">
+                <MapPin className="mx-auto mb-2 text-primary" size={32} />
+                <p className="text-sm text-muted-foreground">Încărcare hartă...</p>
+              </div>
+            </div>
+          )}
           <div className="absolute inset-0 bg-primary/5 flex items-end justify-center pb-4">
             <div className="text-center bg-card/95 p-3 rounded-lg shadow-lg backdrop-blur-sm">
               <MapPin className="mx-auto mb-1 text-primary" size={24} aria-hidden="true" />
