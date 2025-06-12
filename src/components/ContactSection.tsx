@@ -23,38 +23,7 @@ const OFFICE_HOURS = {
   note: "Recomandăm programări in avans"
 };
 
-// Try using the search format instead of just coordinates
-const GOOGLE_MAPS_EMBED = `https://www.google.com/maps/embed/v1/search?key=AIzaSyDUpkrIzVtmeeMoQrMfCNIBcezD9HiFqZw&q=44.4621721,26.0730025+B-dul+Ion+Mihalache+106+București&zoom=18&maptype=roadmap`;
-
 export default function ContactSection() {
-  const [shouldLoadMap, setShouldLoadMap] = useState(false);
-  const mapContainerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setShouldLoadMap(true);
-            observer.disconnect();
-          }
-        });
-      },
-      { rootMargin: '100px' }
-    );
-
-    if (mapContainerRef.current) {
-      observer.observe(mapContainerRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
-  // Add some debugging
-  useEffect(() => {
-    console.log('Google Maps Embed URL:', GOOGLE_MAPS_EMBED);
-  }, []);
-
   return (
     <section
       id="contact"
@@ -155,32 +124,23 @@ export default function ContactSection() {
         </div>
 
         <div 
-          ref={mapContainerRef}
-          className="flex-1 min-w-[250px] h-[240px] md:h-auto rounded-lg overflow-hidden border border-border shadow"
+          className="flex-1 min-w-[250px] h-[240px] md:h-auto rounded-lg overflow-hidden border border-border shadow relative"
           role="img"
-          aria-label="Hartă interactivă cu locația Biroului Notarial Mariana Cîrstocea"
+          aria-label="Vedere statică a zonei unde se află Biroul Notarial Mariana Cîrstocea"
         >
-          {shouldLoadMap ? (
-            <iframe
-              title="Locația Biroului Notarial Mariana Cîrstocea pe Google Maps"
-              src={GOOGLE_MAPS_EMBED}
-              width="100%"
-              height="240"
-              loading="lazy"
-              className="w-full h-full"
-              style={{ border: 0 }}
-              allowFullScreen
-              referrerPolicy="no-referrer-when-downgrade"
-              aria-label="Hartă Google Maps cu locația exactă a biroului notarial"
-            />
-          ) : (
-            <div className="w-full h-full bg-muted flex items-center justify-center" aria-label="Se încarcă harta">
-              <div className="text-center">
-                <MapPin className="mx-auto mb-2 text-muted-foreground" size={24} aria-hidden="true" />
-                <p className="text-sm text-muted-foreground">Se încarcă harta...</p>
-              </div>
+          <img
+            src="https://images.unsplash.com/photo-1466442929976-97f336a657be?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80"
+            alt="Vedere statică a zonei Bucureștiului unde se află biroul notarial"
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-primary/10 flex items-center justify-center">
+            <div className="text-center bg-card/90 p-4 rounded-lg shadow">
+              <MapPin className="mx-auto mb-2 text-primary" size={32} aria-hidden="true" />
+              <p className="text-sm font-semibold text-card-foreground">Biroul Notarial</p>
+              <p className="text-xs text-muted-foreground">B-dul Ion Mihalache 106</p>
             </div>
-          )}
+          </div>
         </div>
       </div>
     </section>
