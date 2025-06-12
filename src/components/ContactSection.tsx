@@ -1,6 +1,7 @@
-
-import { MapPin, Navigation, Phone, Mail, Smartphone, Clock } from "lucide-react";
+import { MapPin, Navigation, Phone, Mail, Smartphone, Clock, Expand } from "lucide-react";
 import { useState } from "react";
+import { Dialog, DialogContent, DialogTrigger } from "./ui/dialog";
+import { Button } from "./ui/button";
 
 const ADDRESS = {
   line1: "B-dul Ion Mihalache, nr. 106, Bl. 84, Sc. B, Et. 2, Ap. 32",
@@ -126,7 +127,7 @@ export default function ContactSection() {
         </div>
 
         <div 
-          className="flex-1 min-w-[250px] h-[240px] md:h-auto rounded-lg overflow-hidden border border-border shadow relative"
+          className="flex-1 min-w-[250px] h-[240px] md:h-auto rounded-lg overflow-hidden border border-border shadow relative group"
           role="img"
           aria-label="Hartă cu locația exactă a Biroului Notarial Mariana Cîrstocea pe B-dul Ion Mihalache 106"
         >
@@ -143,6 +144,28 @@ export default function ContactSection() {
             decoding="async"
             onLoad={() => setImageLoaded(true)}
           />
+          
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button
+                variant="secondary"
+                size="icon"
+                className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-background/80 backdrop-blur-sm hover:bg-background/90"
+                aria-label="Mărește imaginea cu harta"
+              >
+                <Expand size={16} />
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="max-w-4xl w-full h-[80vh] p-0">
+              <div className="w-full h-full">
+                <img
+                  src="/lovable-uploads/8f8cac27-aa5b-47fa-beae-433a11078e3d.png"
+                  alt="Vedere aeriană mărită cu locația exactă a biroului notarial pe B-dul Ion Mihalache 106, București, Sector 1"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+            </DialogContent>
+          </Dialog>
         </div>
       </div>
     </section>
